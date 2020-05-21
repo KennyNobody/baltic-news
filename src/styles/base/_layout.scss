@@ -1,0 +1,36 @@
+.layout {
+	&__header {
+
+	}
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 20px;
+	}
+	&__footer {
+		
+	}
+	&__sidebar {
+		&--left {
+			background-color: red;
+			width: calc(100% / 12 * 2 - 20px);
+		}
+		&--right {
+			background-color: green;
+			width: calc(100% / 12 * 4 - 20px);
+		}
+	}
+	&__main {
+		background-color: pink;
+		width: calc(100% / 12 * 6);
+	}
+}
+
+.container {
+	width: 100%;
+	max-width: 1580px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
