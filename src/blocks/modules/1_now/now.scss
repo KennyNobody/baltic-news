@@ -79,6 +79,10 @@
 		display: flex;
 		justify-content: space-between;
 	}
+	&__links {
+		border-right: 2px solid $light;
+		width: calc(100% / 12 * 8);
+	}
 	&__link {
 		text-decoration: none;
 		color: $light;
@@ -86,12 +90,58 @@
 		font-weight: 600;
 		font-size: 18px;
 		display: inline-block;
-		margin-right: 44px;
+		margin-right: 3%;
 		&:hover {
 			opacity: 0.7;
 		}
 		&:last-child {
 			margin-right: 0px;
+		}
+	}
+	&__toolbar {
+		flex-grow: 1;
+		min-width: 0px;
+		display: flex;
+		justify-content: space-between;
+		padding-left: 50px;
+		align-items: center;
+	}
+	&__link-all {
+		text-decoration: none;
+		color: $light;
+		line-height: 44px;
+		font-weight: 600;
+		font-size: 18px;
+		display: inline-flex;
+		align-items: center;
+		&:hover {
+			opacity: 0.7;
+		}
+		svg {
+			margin-left: 30px;
+			width: 24px;
+			position: relative;
+			top: 2px;
+		}
+	}
+	&__search-btn {
+		background: none;
+		width: 24px;
+		height: 24px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0px;
+		border: none;
+		transition: 0.3s all;
+		&:hover {
+			opacity: 0.7;
+			cursor: pointer;
+		}
+		svg {
+			fill: $light;
+			width: 20px;
+			height: 20px;
 		}
 	}
 }

@@ -1,4 +1,5 @@
 .layout {
+	min-height: 100vh;
 	&__header {
 
 	}
@@ -12,17 +13,23 @@
 	}
 	&__sidebar {
 		&--left {
-			background-color: red;
 			width: calc(100% / 12 * 2 - 20px);
 		}
 		&--right {
-			background-color: green;
 			width: calc(100% / 12 * 4 - 20px);
 		}
 	}
 	&__main {
-		background-color: pink;
 		width: calc(100% / 12 * 6);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		&--top {
+
+		}
+		&--bottom {
+
+		}
 	}
 }
 

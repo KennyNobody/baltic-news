@@ -1,0 +1,49 @@
+.info {
+	font-size: 16px;
+	padding: 14px;
+	padding-bottom: 69px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	&__logo {
+		display: block;
+		width: 100%;
+		margin-bottom: 28px;
+		img {
+			width: 100%;
+			display: block;
+		}
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+	&__line {
+		padding-top: 12px;
+		padding-bottom: 12px;
+		border-bottom: 2px solid #F4F8F8;
+		&:last-of-type {
+			margin-bottom: 22px;
+		}
+	}
+	&__btn {
+		background: $red;
+		display: block;
+		border-radius: 6px;
+		color: $light;
+		font-weight: bold;
+		padding: 10px;
+		font-size: 14px;
+		text-decoration: none;
+		text-align: center;
+		&:hover {
+			opacity: 0.7;
+		} 
+	}
+	&__title {
+		&--text {
+			font-weight: bold;
+			font-size: 12px;
+			text-transform: uppercase;
+			color: #333333;
+		}
+	}
+}

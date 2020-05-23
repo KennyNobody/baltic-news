@@ -1,3 +1,25 @@
-.layout {
-	
+.text {
+	p {
+		margin-bottom: 1rem;
+	}
+	strong, b {
+		font-weight: bold;
+	}
+	a {
+		color: inherit;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.accent-block {
+	display: inline-block;
+	background-color: $accent;
+	color: $light;
+	background: $accent;
+	border-radius: 6px;
+	padding: 4px 7px;
+	margin-left: 6px;
+	margin-right: 6px;
 }

@@ -9,15 +9,58 @@
         @@include("../blocks/modules/header/header.html")
         <div class="container">
             <div class="layout__content">
-                <aside class="layout__sidebar layout__sidebar--left">
-                    1
-                </aside>
+                @@include("../blocks/modules/layout__sidebar--left/sidebar-left.html")
                 <main class="layout__main">
-                    @@include("../blocks/modules/footer/footer.html")
+                    <div class="layout__main--top">
+                        <!-- В alt не пиши слова в духе "баннер" или "реклама", адблок их блокирует -->
+                        <a href="" class="promo-thumb">
+                            <img src="img/promo-img-1.jpg" alt="Картинка">
+                        </a>
+                        <div class="article-main" style="background-image: url('http://placehold.it/900x600');">
+                            <picture class="article-main__image-wrap">
+                                <source type="image/webp" srcset="img/image-1.webp"></source>
+                                <img src="img/image-1.jpg" alt="Заголовок новости">
+                            </picture>
+                            <div class="article-main__content-wrap">
+                                <div class="article-main__content">
+                                    <div class="tags">
+                                        <span class="tags__item">
+                                            Политика
+                                        </span>
+                                        <span class="tags__item">
+                                            Общество
+                                        </span>
+                                    </div>
+                                    <!-- Вот тут ограничь количество символов примерно в 3.5 строки -->
+                                    <h2 class="article-main__title">
+                                        Летучие собаки нашего зоопарка предпочитают огурцы, мед, бананы Летучие собаки нашего зоопарка предпочитают огурцы, мед, бананы Летучие собаки нашего зоопарка предпочитают...
+                                    </h2>
+                                    <div class="article-main__toolbar">
+                                        <svg class="article-main__icon">
+                                            <use xlink:href="img/sprites/sprite.svg#icon-clock"></use>
+                                        </svg>
+                                        <time class="article-main__time">
+                                            5 марта 2020, 12:57
+                                        </time>
+                                        <svg class="article-main__icon">
+                                            <use xlink:href="img/sprites/sprite.svg#icon-comments"></use>
+                                        </svg>
+                                        <span class="article-main__comment-count">
+                                            25
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="promo-thumb">
+                            <img src="img/promo-img-4.jpg" alt="Картинка">
+                        </a>
+                    </div>
+                    <div class="layout__main--bottom">
+                        @@include("../blocks/modules/footer/footer.html")
+                    </div>
                 </main>
-                <aside class="layout__sidebar layout__sidebar--right">
-                    3
-                </aside>
+                @@include("../blocks/modules/layout__sidebar--right/sidebar-right.html")
             </div>
         </div>
 

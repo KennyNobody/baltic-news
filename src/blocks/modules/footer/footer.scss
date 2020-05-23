@@ -1,0 +1,59 @@
+.footer {
+	background: #FFFFFF;
+	border-radius: 10px 10px 0px 0px;
+	padding: 20px;
+	padding-bottom: 32px;
+	&__toolbar {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 30px;
+	}
+	&__link {
+		color: #333333;
+		text-decoration: none;
+		display: inline-block;
+		padding-right: 22px;
+		border-right: 1px solid #CAD4D4;
+		margin-right: 22px;
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+	&__content {
+
+	}
+	&__privacy {
+		display: inline-block;
+		margin-bottom: 32px;
+		color: #6F8488;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	&__discript {
+		a {
+			color: $red;
+		}
+	}
+}
+
+.socials {
+	display: inline-block;
+	&__link {
+		display: inline-block;
+		margin-right: 14px;
+		&:hover {
+			opacity: 0.7;
+		}
+		&:last-child {
+			margin-right: 0px;
+		}
+		svg {
+			display: block;
+			width: 30px;
+			height: 30px;
+		}
+	}
+}
