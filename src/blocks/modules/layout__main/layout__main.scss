@@ -54,6 +54,22 @@
 	}
 }
 
+.meta {
+	margin-bottom: 10px;
+	color: #6F8488;
+	&--big {
+		margin-bottom: 0px;
+		color: #A9BBBE;
+	}
+	&__icon {
+		color: #A9BBBE;
+		padding-right: 3px;
+	}
+	&__time {
+		margin-right: 18px;
+	}
+}
+
 .video {
 	height: 420px;
 	width: 100%;

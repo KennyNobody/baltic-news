@@ -1,0 +1,53 @@
+.archive {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px 20px;
+	background: #FFFFFF;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	&__title {
+		font-weight: 600;
+		font-size: 24px;
+		text-transform: uppercase;
+		color: #333333;
+	}
+	&__link {
+		border: none;
+		text-align: right;
+		font-size: 16px;
+		color: $accent;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	&__btn {
+		display: inline-block;
+		border: none;
+		border: 2px solid $accent;
+		font-family: $font-main;
+		font-size: 14px;
+		padding: 5px 10px;
+		font-weight: 600;
+		margin-left: 5px;
+		border-radius: 5px;
+		&--submit {
+			background-color: $accent;
+			color: $light;
+		}
+		&--cancel {
+			color: $accent;
+			background-color: $light;
+		}
+	}
+}
+
+.in-range {
+	background-color: #00A9A9 !important;
+	color: $light !important;
+}
+
+.start-date, .end-date {
+	background-color: $accent !important;
+}

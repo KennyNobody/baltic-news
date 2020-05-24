@@ -1,0 +1,45 @@
+.single {
+	&__title {
+		margin-bottom: 22px;
+		font-weight: bold;
+		font-size: 26px;
+		font-family: $font-title;
+	}
+	&__meta {
+		margin-bottom: 26px;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__author {
+		font-style: italic;
+		font-size: 16px;
+	}
+	&__inernal-article {
+		width: 372px;
+		background-color: red;
+		float: right;
+		display: block;
+		margin-left: 20px;
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+	&__info {
+		&-line {
+			margin-bottom: 8px;
+			color: #4F4F4F;
+		}
+		strong {
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 24px;
+			color: $dark;
+		}
+		a {
+			font-family: $font-title;
+			color: #4F4F4F;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}

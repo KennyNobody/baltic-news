@@ -48,27 +48,3 @@
 		margin-right: 14px;
 	}
 }
-
-.archive {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 15px 20px;
-	background: #FFFFFF;
-	border-radius: 10px;
-	margin-bottom: 20px;
-	&__title {
-		font-weight: 600;
-		font-size: 24px;
-		text-transform: uppercase;
-		color: #333333;
-	}
-	&__link {
-		font-size: 16px;
-		color: #A9BBBE;
-		text-decoration: underline;
-		&:hover {
-			text-decoration: none;
-		}
-	}
-}
