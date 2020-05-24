@@ -7,3 +7,61 @@
 		height: auto;
 	}
 }
+
+.toolbar {
+	display: flex;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	justify-content: space-between;
+	&__link {
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		&:hover {
+			opacity: 0.7;
+		}
+		&--top {
+			color: #CAD4D4;
+			span {
+				
+			}
+			svg {
+				margin-right: 15px;
+			}
+		}
+		&--more {
+			color: #6F8488;
+			span {
+				margin-right: 15px;
+			}
+			svg {
+
+			}
+		}
+		&:first-child {
+			margin-right: 14px;
+		}
+		span {
+			font-weight: 800;
+			font-size: 20px;
+			text-transform: uppercase;
+			
+		}
+		svg {
+			width: 22px;
+			height: 22px;
+		}
+	}
+}
+
+.video {
+	height: 420px;
+	width: 100%;
+	overflow: hidden;
+	border-radius: 10px;
+	margin-bottom: 20px; 
+	iframe {
+		width: 100% !important;
+		height: 100% !important;
+	}
+}

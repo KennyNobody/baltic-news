@@ -1,3 +1,106 @@
+.news {
+	&__title {
+		padding-top: 20px;
+		font-weight: 600;
+		font-size: 24px;
+		text-transform: uppercase;
+		color: #333333;
+		margin-bottom: 20px;
+	}
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		overflow: hidden;
+	}
+}
+
+.article {
+	position: relative;
+	overflow: hidden; 
+	background-color: $light;
+	display: flex;
+	border-radius: 10px;
+	text-decoration: none;
+	color: $dark;
+	margin-bottom: 20px;
+	&:hover {
+		opacity: 0.7;
+	}
+	&--line {
+		.tags {
+			display: none;
+		}
+	}
+	&--card {
+		display: block;
+		width: calc(50% - 10px);
+		.article__thumb {
+			height: 200px;
+			width: 100%;
+		}
+		.article__toolbar {
+			order: -1;
+			margin-bottom: 10px;
+		}
+		.article__title {
+			margin-bottom: 15px;
+		}
+	}
+	&__thumb {
+		height: 100%;
+		width: 242px;
+		flex-shrink: 0;
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+	&__content {
+		padding: 12px 20px 20px 20px;
+		display: flex;
+		flex-direction: column;
+	}
+	&__tag {
+		color: #A9BBBE;
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: 800;
+		padding-left: 7px;
+		padding-right: 7px;
+		border: 2px solid #CAD4D4;
+		box-sizing: border-box;
+		border-radius: 6px;
+		display: inline-block;
+		width: fit-content;
+		margin-bottom: 7px;
+	}
+	&__title {
+		font-weight: bold;
+		font-size: 18px;
+		margin-bottom: 4px;
+		font-family: $font-title;
+	}
+	&__toolbar {
+		color: #6F8488;
+		margin-bottom: 5px;
+		i {
+			color: #A9BBBE;
+			padding-right: 3px;
+		}
+	}
+	&__time {
+		// display: inline-block;
+		margin-right: 18px;
+		// padding-right: 10px;
+	}
+	&__text {
+		color: #333333;
+	}
+}
+
 .article-main {
 	height: 400px;
 	position: relative;
@@ -52,6 +155,9 @@
 	&__toolbar {
 		color: #A9BBBE;
 		font-size: 16px;
+		i {
+			padding-right: 3px;
+		}
 	}
 	&__time {
 		margin-right: 15px;
@@ -66,10 +172,11 @@
 }
 
 .tags {
-	position: absolute;
+	position: static;
 	left: 0px;
 	top: 20px;
 	display: block;
+	position: absolute;
 	&__item {
 		background: rgba(255, 255, 255, 0.6);
 		margin-bottom: 20px;

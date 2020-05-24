@@ -11,41 +11,24 @@ svg, img {
 	width: 1rem;
 }
 
-.icon-line {
-	display: inline-block;
-	height: 10px;
-	position: relative;
-	&--camera {
-		width: 16px;
-		height: 16px;
-		top: 3px;
-	}
-	&--page {
-		width: 16px;
-		height: 16px;
-		top: 2px;
-	}
-	&--value {
-		width: 16px;
-		height: 16px;
-		top: 3px;
-	}
-	&--pr {
-		width: 25px;
-		height: 17px;
-		top: 3px;
-	}
-	&--business {
-		width: 64px;
-		height: 17px;
-		top: 3px;
-	}
-	&--photo {
-		width: 16px;
-		height: 16px;
-		top: 3px;
-	}
+i {
+	font-size: inherit;
+	color: inherit;
+}
 
+.icon-text {
+	font-size: 12px;
+	padding-left: 4px;
+	padding-right: 4px;
+	font-weight: 600;
+	color: #A9BBBE;
+	display: inline-block;
+	text-transform: uppercase;
+	font-family: $font-main;
+	border: 1px solid #A9BBBE;
+	position: relative;
+	border-radius: 4px;
+	top: -2px;
 }
 
 .body {
