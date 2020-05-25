@@ -20,6 +20,14 @@
 		&:hover {
 			opacity: 0.7;
 		}
+		&--back {
+			color: #CAD4D4;
+			svg {
+				margin-right: 15px;
+				transform: rotate(-90deg);
+				transition: 0;
+			}
+		}
 		&--top {
 			color: #CAD4D4;
 			span {
@@ -57,6 +65,9 @@
 .meta {
 	margin-bottom: 10px;
 	color: #6F8488;
+	i {
+		font-style: normal;
+	}
 	&--big {
 		margin-bottom: 0px;
 		color: #A9BBBE;
@@ -79,5 +90,46 @@
 	iframe {
 		width: 100% !important;
 		height: 100% !important;
+	}
+}
+
+.btn {
+	align-items: center;
+	justify-content: center;
+	background-color: #CAD4D4;
+	border-radius: 10px;
+	text-decoration: none;
+	color: $dark;
+	display: inline-flex;
+	padding: 0px 17px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	min-height: 50px;
+	&:hover {
+		opacity: 0.7;
+	}
+	svg {
+		height: 29px;
+		width: 29px;
+		margin-right: 10px;
+	}
+	span {
+		font-weight: normal;
+		font-size: 16px;
+		color: #333333;
+	}
+	&--accent {
+		background-color: $accent;
+		span {
+			color: $light;
+			font-weight: 600;
+		}
+	}
+	&--gray {
+		background-color: #6F8488;
+		span {
+			color: $light;
+			font-weight: 600;
+		}
 	}
 }

@@ -16,7 +16,6 @@
 	}
 	&__inernal-article {
 		width: 372px;
-		background-color: red;
 		float: right;
 		display: block;
 		margin-left: 20px;
@@ -24,6 +23,7 @@
 		margin-bottom: 40px;
 	}
 	&__info {
+		margin-bottom: 40px;
 		&-line {
 			margin-bottom: 8px;
 			color: #4F4F4F;
@@ -41,5 +41,9 @@
 				text-decoration: none;
 			}
 		}
+	}
+	&__btns {
+		display: flex;
+		flex-wrap: wrap;
 	}
 }

@@ -1,7 +1,7 @@
 .text {
 	p {
 		font-size: 16px;
-		margin-bottom: 1rem;
+		margin-bottom: 1em;
 		padding-right: 44px;
 	}
 	strong, b {
@@ -12,6 +12,9 @@
 		&:hover {
 			text-decoration: none;
 		}
+	}
+	i {
+		font-style: italic;
 	}
 	figure {
 		display: block;
@@ -28,6 +31,18 @@
 	}
 	figcaption {
 		color: #6F8488;
+	}
+	ul {
+		list-style-type: disc;
+		list-style-position: inside;
+		margin-bottom: 2em;
+		line-height: 2;
+	}
+	ol {
+		list-style-type: decimal;
+		list-style-position: inside;
+		margin-bottom: 2em;
+		line-height: 2;
 	}
 }
 
