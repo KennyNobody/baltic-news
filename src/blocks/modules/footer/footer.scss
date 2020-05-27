@@ -3,11 +3,17 @@
 	border-radius: 10px 10px 0px 0px;
 	padding: 20px;
 	padding-bottom: 32px;
+	&__nav {
+		margin-bottom: 20px;
+	}
+	&__socials {
+		margin-bottom: 20px;
+	}
 	&__toolbar {
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
-		margin-bottom: 30px;
+		margin-bottom: 10px;
 	}
 	&__link {
 		color: #333333;

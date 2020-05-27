@@ -1,8 +1,12 @@
 .text {
+	line-height: 1.5;
 	p {
 		font-size: 16px;
 		margin-bottom: 1em;
 		padding-right: 44px;
+		@include r(1260) {
+			padding-right: 0px;
+		}
 	}
 	strong, b {
 		font-weight: bold;
@@ -43,6 +47,15 @@
 		list-style-position: inside;
 		margin-bottom: 2em;
 		line-height: 2;
+	}
+}
+
+.columns {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	&__col {
+		width: calc(50% - 10px);
 	}
 }
 

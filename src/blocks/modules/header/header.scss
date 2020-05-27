@@ -1,0 +1,31 @@
+.header {
+	
+}
+
+.mob-header {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	display: none;
+	@include r(1260) {
+		display: block;
+	}
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__logo {
+		display: block;
+		width: 150px;
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+	&__menu {
+		svg {
+			height: 22px;
+			width: 22px;
+		}
+	}
+}

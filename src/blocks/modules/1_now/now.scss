@@ -75,6 +75,9 @@
 	padding-bottom: 9px;
 	color: $light;
 	background-color: $accent;
+	@include r(1260) {
+		display: none;
+	}
 	&__container {
 		display: flex;
 		justify-content: space-between;

@@ -6,11 +6,18 @@
 	background: #FFFFFF;
 	border-radius: 10px;
 	margin-bottom: 20px;
+	@include r(1260) {
+		display: block;
+		padding: 0px;
+	}
 	&__title {
 		font-weight: 600;
 		font-size: 24px;
 		text-transform: uppercase;
 		color: #333333;
+		@include r(1260) {
+			margin-bottom: 10px;
+		}
 	}
 	&__link {
 		border: none;
@@ -18,6 +25,9 @@
 		font-size: 16px;
 		color: $accent;
 		text-decoration: underline;
+		@include r(1260) {
+			text-align: left;
+		}
 		&:hover {
 			text-decoration: none;
 		}

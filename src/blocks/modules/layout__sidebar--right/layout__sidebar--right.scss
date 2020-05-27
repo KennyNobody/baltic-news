@@ -3,6 +3,9 @@
 	margin-bottom: 20px;
 	padding: 20px 20px 25px 20px;
 	border-radius: 10px;
+	@include r(1260) {
+		padding: 0px;
+	}
 	&__title {
 		padding-bottom: 18px;
 		border-bottom: 2px solid #F4F8F8;

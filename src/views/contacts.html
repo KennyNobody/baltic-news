@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Контакты</title>
+    @@include("../blocks/modules/head/head.html")
+</head>
+<body class="body">
+    <div class="layout">
+        @@include("../blocks/modules/header/header.html")
+        <div class="container">
+            <div class="layout__content">
+                @@include("../blocks/modules/layout__sidebar--left/sidebar-left.html")
+                <main class="layout__main">
+                    <div class="layout__main--top">
+                        <div class="single">
+                            <h1 class="single__title">
+                                Контакты
+                            </h1>
+                            <div class="columns">
+                                <div class="columns__col">
+                                    <div class="socials-contacts">
+                                        <a href="" class="socials-contacts__link">
+                                            <svg class="icon-svg">
+                                                <use xlink:href="img/sprites/sprite.svg#icon-facebook-col"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="" class="socials-contacts__link">
+                                            <svg class="icon-svg">
+                                                <use xlink:href="img/sprites/sprite.svg#icon-vk-col"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="" class="socials-contacts__link">
+                                            <svg class="icon-svg">
+                                                <use xlink:href="img/sprites/sprite.svg#icon-ok-col"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <p>
+                                            <strong>Информационное агентство «Балтик Плюс»</strong><br>
+                                            236023, Калининград, ул. Яналова, 2 
+                                            <a class="map-link" href="" data-coord="[54.73035542010973,20.48820783524934]">Посмотреть на карте</a>
+                                        </p>
+                                        <p>
+                                            <a href="tel:+74012952555"><b>+7 (4012) 952-555</b></a> (многоканальный)
+                                        </p>
+                                        <p>
+                                            <strong>Рекламный отдел «Балтик Плюс»</strong> <br>
+                                            236023, Калининград, ул. Третьяковская, 10 <br>
+                                            <a class="map-link" href="" data-coord="[54.74444506993298,20.47730349999996]">Посмотреть на карте</a>
+                                        </p>
+                                        <p>
+                                            Прямой эфир «Балтик Плюс» <br>
+                                            <a href="tel:+74012952555">+7 (4012) 952-555</a> (многоканальный) <br> 
+                                            <a href="mailto:online@balticplus.ru">online@balticplus.ru</a>
+                                        </p>
+                                        <p>
+                                            Все ссылки радиостанции на подкасты, соцсети, новости, видео, онлайн вещание можно найти по единому адресу:
+                                            <a href="http://taplink.cc/baltic_plus">http://taplink.cc/baltic_plus</a>
+                                        </p>
+                                        <a href="" class="btn">
+                                            <svg class="icon-svg">
+                                                <use xlink:href="img/sprites/sprite.svg#icon-file"></use>
+                                            </svg>
+                                            <span>
+                                                Постановление №453.pdf
+                                            </span>
+                                        </a>
+                                        <a href="" class="btn">
+                                            <svg class="icon-svg">
+                                                <use xlink:href="img/sprites/sprite.svg#icon-file"></use>
+                                            </svg>
+                                            <span>
+                                                Постановление №453.pdf
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="columns__col">
+                                    <div class="map"></div>
+                                    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ffa1ec12-4f97-4bbe-a8e3-ff7bf56b1f87" type="text/javascript"></script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layout__main--bottom">
+                        @@include("../blocks/modules/footer/footer.html")
+                    </div>
+                </main>
+                @@include("../blocks/modules/layout__sidebar--right/sidebar-right.html")
+            </div>
+        </div>
+    </div>
+    @@include("../blocks/modules/mmenu/mmenu.html")
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

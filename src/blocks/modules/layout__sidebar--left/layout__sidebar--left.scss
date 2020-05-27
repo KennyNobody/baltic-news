@@ -4,10 +4,17 @@
 	padding-bottom: 69px;
 	background-color: #ffffff;
 	border-radius: 10px;
+	@include r(1260) {
+		padding: 0px;
+		margin-bottom: 20px;
+	}
 	&__logo {
 		display: block;
 		width: 100%;
 		margin-bottom: 28px;
+		@include r(1260) {
+			display: none;
+		}
 		img {
 			width: 100%;
 			display: block;
@@ -20,6 +27,9 @@
 		padding-top: 12px;
 		padding-bottom: 12px;
 		border-bottom: 2px solid #F4F8F8;
+		@include r(1260) {
+			display: none;
+		}
 		&:last-of-type {
 			margin-bottom: 22px;
 		}
@@ -39,11 +49,40 @@
 		} 
 	}
 	&__title {
+		margin-bottom: 9px;
 		&--text {
 			font-weight: bold;
 			font-size: 12px;
 			text-transform: uppercase;
 			color: #333333;
 		}
+	}
+	&__block {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.change {
+	&__title {
+		display: flex;
+		align-items: center;
+		span {
+			font-weight: bold;
+			font-size: 12px;
+			line-height: 16px;
+			color: #CAD4D4;
+			margin-right: 6px;
+		}
+		svg {
+			height: 6px;
+			width: 8px;
+			display: block;
+		}
+	}
+	&__content {
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 22px;
 	}
 }

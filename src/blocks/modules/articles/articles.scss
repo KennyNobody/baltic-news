@@ -31,10 +31,16 @@
 		.tags {
 			display: none;
 		}
+		@include r(760) {
+			display: block;
+		}
 	}
 	&--card {
 		display: block;
 		width: calc(50% - 10px);
+		@include r(760) {
+			width: 100%;
+		}
 		.article__thumb {
 			height: 200px;
 			width: 100%;
@@ -57,6 +63,10 @@
 		height: 100%;
 		width: 242px;
 		flex-shrink: 0;
+		@include r(760) {
+			height: 200px;
+			width: 100%;
+		}
 		img {
 			height: 100%;
 			width: 100%;
