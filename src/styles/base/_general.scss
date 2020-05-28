@@ -37,6 +37,13 @@ i {
 	overflow-x: hidden;
 	line-height: 1.4;
 	background-color: #F4F8F8;
+	&--front {
+		@include r(1260) {
+			.layout__sidebar--right {
+				display: block !important;
+			}
+		}
+	}
 	@include r(1260) {
 		background-color: $light;
 	}

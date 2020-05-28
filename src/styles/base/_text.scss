@@ -54,8 +54,15 @@
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	@include r(760) {
+		display: block;
+	}
 	&__col {
 		width: calc(50% - 10px);
+		@include r(760) {
+			width: 100%;
+			margin-bottom: 20px;
+		}
 	}
 }
 
@@ -68,4 +75,47 @@
 	padding: 4px 7px;
 	margin-left: 6px;
 	margin-right: 6px;
+}
+
+.audio {
+	background: $light;
+	border-radius: 10px;
+	display: flex;
+	padding: 15px 12px;
+	margin-bottom: 1rem;
+	&__btn {
+		height: 38px;
+		width: 38px;
+		background-color: $accent;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: none;
+		border-radius: 30px;
+		transition: 0.3s all;
+		&:hover {
+			cursor: pointer;
+			opacity: 0.7;
+		}
+		&--disabled {
+			pointer-events: none;
+			opacity: 0.6;
+		}
+		&--pause {
+			.audio__btn-icon--play {
+				display: block;
+			}
+			.audio__btn-icon--pause {
+				display: none;
+			}
+		}
+		&--playing {
+			.audio__btn-icon--play {
+				display: none;
+			}
+			.audio__btn-icon--pause {
+				display: block;
+			}
+		}
+	}
 }

@@ -1,5 +1,7 @@
+import {Howl, Howler} from 'howler';
 import "./font-awesome.js";
 import "./map.js";
+import "./player.js";
 import "%modules%/header/header";
 import "%modules%/footer/footer";
 import "%modules%/mmenu/mmenu";

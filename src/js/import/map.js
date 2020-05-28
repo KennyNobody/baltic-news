@@ -17,14 +17,13 @@
 		}, {
 			searchControlProvider: 'yandex#search'
 		});
-		myMap.behaviors.disable('scrollZoom');
+		myMap.behaviors.disable(['drag', 'rightMouseButtonMagnifier', 'scrollZoom'])
 
 		if (links) {
 
 			$('.map-link').each(function() {
 				var obj = $(this).attr("data-coord");
 				obj = JSON.parse(obj);
-				console.log(this)
 				myMap.geoObjects
 				.add(new ymaps.Placemark(obj, {}, {
 					preset: 'islands#greenDotIconWithCaption',
