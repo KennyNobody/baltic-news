@@ -5,7 +5,7 @@
 	let broadcast = new Howl({
 		src: broadcastLink,
 		// autoplay: true,
-		preload: true,
+		// preload: true,
 		html5: true
 	});
 
@@ -14,12 +14,11 @@
 		if (broadcast.playing() == true) {
 			broadcast.pause();
 		} else {
-			player.pause();
 			broadcast.play();
 		}
 	});
 
-	broadcast.once('load', function(){
+	broadcast.on('load', function(){
 		broadcastBtn.classList.remove('player__btn--disabled');
 	});
 
@@ -27,53 +26,88 @@
 		broadcastBtn.classList.remove('player__btn--disabled');
 		broadcastBtn.classList.add('player__btn--pause');
 		broadcastBtn.classList.remove('player__btn--playing');
+		if (player) {
+			player.pause();
+		}
 	});
 
 	broadcast.on('pause', function(){
 		broadcastBtn.classList.remove('player__btn--disabled');
 		broadcastBtn.classList.remove('player__btn--pause');
 		broadcastBtn.classList.add('player__btn--playing');
-	})
+		broadcast.unload();
+	});
 
 	// Дальше идет плеер внутренний
 
-	const playerArticle = document.querySelector('.audio');
-	let playerBtn = playerArticle.querySelector('.audio__btn');
-	let playerLink = playerArticle.getAttribute('data-sound');
+	let utils = {
+		formatTime: function (secs) {
+			var minutes = Math.floor(secs / 60) || 0;
+			var seconds = (secs - minutes * 60) || 0;
+			return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+		},
+		updateTimeTracker: function () {
+			var self = this;
+			var seek = player.seek() || 0;
+			var currentTime = utils.formatTime(Math.round(seek));
 
-	let player = new Howl({
-		src: playerLink,
-		preload: true,
-		html5: true
-	});
+			$('.audio__time').text(currentTime);
+			progress.style.width = (((seek / self.duration()) * 100) || 0) + '%';
 
-	playerBtn.addEventListener('click', function(){
-		if (player.playing() == true) {
-			player.pause();
-		} else {
-			player.play();
+			if (self.playing()) {
+				requestAnimationFrame(utils.updateTimeTracker.bind(self));
+			}
 		}
+	};
+
+	var player = new Howl({
+		src: ['http://d.zaix.ru/k9k8.mp3'],
+		onplay: function() {
+			audioPlayed = true;
+			var time = Math.round(player.duration());
+			$('#duration').html(utils.formatTime(time));
+			requestAnimationFrame(utils.updateTimeTracker.bind(this));
+		},
+		onend: function() {
+			playerBtn.classList.remove('audio__btn--disabled');
+			playerBtn.classList.remove('audio__btn--playing');
+			playerBtn.classList.add('audio__btn--pause');
+		},
 	});
 
-	player.on('play', function(){
-		broadcast.pause();
-	});
+	const playerArticle = document.querySelector('.audio');
 
-	player.once('load', function(){
-		broadcastBtn.classList.remove('audio__btn--disabled');
-	});
+	if (playerArticle) {
+		let playerBtn = playerArticle.querySelector('.audio__btn');
+		let playerLink = playerArticle.getAttribute('data-sound');
 
-	player.on('play', function(){
-		broadcast.pause();
-		playerBtn.classList.remove('audio__btn--disabled');
-		playerBtn.classList.add('audio__btn--playing');
-		playerBtn.classList.remove('audio__btn--pause');
-	});
+		playerBtn.addEventListener('click', function(){
+			if (player.playing() == true) {
+				player.pause();
+			} else {
+				player.play();
+			}
+		});
 
-	player.on('pause', function(){
-		playerBtn.classList.remove('audio__btn--disabled');
-		playerBtn.classList.remove('audio__btn--playing');
-		playerBtn.classList.add('audio__btn--pause');
-	})
+		player.once('load', function(){
+			broadcastBtn.classList.remove('audio__btn--disabled');
+		});
+
+		player.on('play', function(){
+			if (broadcast) {
+				broadcast.pause();
+			}
+			playerBtn.classList.remove('audio__btn--disabled');
+			playerBtn.classList.add('audio__btn--playing');
+			playerBtn.classList.remove('audio__btn--pause');
+		});
+
+		player.on('pause', function(){
+			playerBtn.classList.remove('audio__btn--disabled');
+			playerBtn.classList.remove('audio__btn--playing');
+			playerBtn.classList.add('audio__btn--pause');
+		})
+	}
+	
 
 })();

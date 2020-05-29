@@ -8,6 +8,13 @@
 			padding-right: 0px;
 		}
 	}
+	blockquote {
+		font-size: 16px;
+		margin-bottom: 1rem;
+		padding-left: 15px;
+		border-left: 2px solid #CAD4D4;
+		font-style: italic;
+	}
 	strong, b {
 		font-weight: bold;
 	}
@@ -83,7 +90,11 @@
 	display: flex;
 	padding: 15px 12px;
 	margin-bottom: 1rem;
+	font-size: 14px;
+	align-items: center;
 	&__btn {
+		flex-shrink: 0;
+		margin-right: 20px;
 		height: 38px;
 		width: 38px;
 		background-color: $accent;
@@ -118,4 +129,58 @@
 			}
 		}
 	}
+	&__main {
+		min-width: 0px;
+		flex-grow: 1;
+	}
+	&__time {
+		text-align: right;
+		font-weight: bold;
+		color: #CAD4D4;
+	}
+	&__progress {
+		height: 2px;
+		position: relative;
+		width: 100%;
+		display: block;
+		background-color: #CAD4D4;
+	}
+	&__now {
+		background-color: $accent;
+		display: block;
+		height: 100%;
+	}
+	&__name {
+		color: #6F8488;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+
+.volume {
+	margin-left: 25px;
+	&__bar-full {
+
+	}
+	&__bar-empty {
+		width: 158px;
+		height: 2px;
+		display: block;
+		background-color: #CAD4D4;
+	}
+	&__btn {
+		width: 18px;
+		height: 18px;
+		border-radius: 50px;
+		background-color: $accent;
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+	}
+
+}
+
+.comments {
+	margin-bottom: 20px;
 }

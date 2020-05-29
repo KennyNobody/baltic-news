@@ -1,6 +1,9 @@
 .player {
 	padding-top: 11px;
 	padding-bottom: 13px;
+	@include r(1260) {
+		background-color: $light;
+	}
 	&__container {
 		display: flex;
 		align-items: center;
