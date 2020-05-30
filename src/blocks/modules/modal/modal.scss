@@ -6,8 +6,14 @@
 	max-width: 766px;
 	border-radius: 10px;
 	position: relative;
+	@include r(750) {
+
+	}
 	&__header {
 		margin-bottom: 35px;
+		@include r(750) {
+			margin-bottom: 25px;
+		}
 	}
 	&__title {
 		font-weight: bold;
@@ -18,12 +24,27 @@
 		font-size: 14px;
 		color: #6F8488;
 	}
+	&__content {
+		margin-bottom: 28px;
+		@include r(750) {
+			margin-bottom: 25px;
+		}
+	}
 	&__toolbar {
 		display: flex;
+		@include r(750) {
+			display: block;
+		}
 	}
 	&__label {
 		margin-bottom: 35px;
+		@include r(750) {
+			margin-bottom: 25px;
+		}
 		display: block;
+		&:last-child {
+			margin-bottom: 0px;
+		}
 	}
 	&__input-title {
 		margin-bottom: 15px;
@@ -41,6 +62,21 @@
 		border: none;
 		resize: none;
 	}
+	&__select {
+		height: 40px;
+		width: 100%;
+		padding-left: 20px;
+		padding-right: 20px;
+		-webkit-appearance: none;
+		appearance: none;
+		background: #F4F8F8;
+		border-radius: 10px;
+		font-family: $font-main;
+		background-image: url('../img/drop-arrow.svg');
+		background-repeat: no-repeat;
+		background-position: 96% center;
+		border: none;
+	}
 	&__btn {
 		border-radius: 10px;
 		height: 50px;
@@ -53,15 +89,40 @@
 		margin-right: 20px;
 		margin-bottom: 20px;
 		transition: 0.3s all;
+		@include r(750) {
+			width: 100%;
+		}
 		&:hover {
 			opacity: 0.7;
 			cursor: pointer;
 		}
 		&--accept {
 			background: #D82C14;
+			@include r(750) {
+				margin-bottom: 10px;
+			}
 		}
 		&--cancel {
 			background: #A9BBBE;
+		}
+	}
+	&__columns {
+		display: flex;
+		@include r(750) {
+			display: block;
+		}
+	}
+	&__column {
+		@include r(750) {
+			margin-bottom: 25px;
+			width: 100%;
+		}
+		&--left {
+			margin-right: 20px;
+			flex-grow: 1;
+		}
+		&--right {
+			width: 224px;
 		}
 	}
 	&__close {
@@ -84,5 +145,29 @@
 		&:hover {
 			opacity: 0.7;
 		}
+	}
+}
+
+.file {
+	height: 100%;
+	width: 100%;
+	border: 2px dashed #CAD4D4;
+	box-sizing: border-box;
+	border-radius: 10px;
+	margin-bottom: 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-weight: 500;
+	color: #CAD4D4;
+	font-size: 20px;
+	padding: 20px;
+	&:hover {
+		cursor: pointer;
+		opacity: 0.7;
+	}
+	input {
+		display: none;
 	}
 }

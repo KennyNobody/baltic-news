@@ -29,6 +29,16 @@ $(document).ready(function() {
 			},
 			type: 'inline'
 		});
+		(function() {
+			if (window.getSelection()) {
+				let select = window.getSelection();
+				let textarea = document.querySelector('.modal__input--inner');
+
+				if (textarea) {
+					textarea.innerText = select.toString();
+				}
+			}
+		})();
 	}
 
 	function runOnKeys(func, ...codes) {
@@ -59,3 +69,19 @@ $(document).ready(function() {
 		"ControlRight"
 		);
 });
+
+(function(){
+	const input = document.querySelectorAll('.file');
+
+	if(input) {
+		for (let i = 0; i < input.length; i++) {
+			let field = input[i].querySelector('input');
+			let title = input[i].querySelector('.file__title');
+			field.addEventListener('change', function(){
+				let name = this.files[0].name;
+				title.innerText = name;
+			})
+		}
+	}
+
+})();
