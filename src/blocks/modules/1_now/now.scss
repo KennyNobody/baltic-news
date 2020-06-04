@@ -101,9 +101,21 @@
 	@include r(1260) {
 		display: none;
 	}
+	&--search {
+		.h-search {
+			display: flex;
+		}
+		.nav__links {
+			visibility: hidden;
+		}
+		.nav__toolbar {
+			visibility: hidden;
+		}
+	}
 	&__container {
 		display: flex;
 		justify-content: space-between;
+		position: relative;
 	}
 	&__links {
 		border-right: 2px solid $light;
@@ -168,6 +180,69 @@
 			fill: $light;
 			width: 20px;
 			height: 20px;
+		}
+	}
+}
+
+.h-search {
+	background-color: $accent;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	padding-left: 15px;
+	padding-right: 15px;
+	display: none;
+	align-items: center;
+	&__input {
+		height: 100%;
+		box-sizing: border-box;
+		flex-grow: 1;
+		margin-right: 20px;
+		border: none;
+		background: none;
+		color: $light;
+		font-family: $font-main;
+		font-weight: 600;
+		font-size: 18px;
+		&::placeholder {
+			color: $light;
+			font-family: $font-main;
+			font-weight: 600;
+			font-size: 18px;
+		}
+	}
+	&__toolbar {
+		flex-shrink:0;
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+	&__sep {
+		height: 100%;
+		width: 2px;
+		background-color: $light;
+		display: block;
+	}
+	&__btn {
+		width: 44px;
+		height: 44px;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		border: none;
+		background: none;
+		transition: 0.3s all;
+		cursor: pointer;
+		&:hover {
+			opacity: 0.7;
+		}
+		&--submit {
+
+		}
+		&--close {
+
 		}
 	}
 }
