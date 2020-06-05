@@ -32,6 +32,12 @@
 		&--disabled {
 			pointer-events: none;
 			opacity: 0.6;
+			svg {
+				display: none;
+			}
+			.loading {
+				display: block;
+			}
 		}
 		&--playing {
 			.player__btn-icon--play {
@@ -244,5 +250,24 @@
 		&--close {
 
 		}
+	}
+}
+
+.loading {
+	position: relative;
+	margin: 10% auto;
+	width: 20px;
+	height: 20px;
+	display: none;
+	border-radius: 40px;
+	-webkit-box-sizing: border-box;
+	border: solid 4px rgba(255, 103, 0, 0.2);
+	border-top-color: $light;
+	-webkit-animation: spin 1s infinite linear;
+}
+
+@-webkit-keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
 	}
 }

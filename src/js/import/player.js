@@ -10,7 +10,15 @@
 	});
 
 	broadcastBtn.addEventListener('click', function(){
-		
+		if (broadcastBtn.classList.contains('player__btn--playing')) {
+			broadcastBtn.classList.remove('player__btn--playing');
+			broadcastBtn.classList.add('player__btn--disabled');
+
+			if (player) {
+				player.pause();
+			}
+		}
+
 		if (broadcast.playing() == true) {
 			broadcast.pause();
 		} else {
@@ -20,6 +28,7 @@
 
 	broadcast.on('load', function(){
 		broadcastBtn.classList.remove('player__btn--disabled');
+		broadcastBtn.classList.add('player__btn--playing');
 	});
 
 	broadcast.on('play', function(){
