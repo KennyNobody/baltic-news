@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>New Page</title>
+        <meta name="theme-color" content="#c9e0e04d">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+        <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+        <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+        <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+        <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+        <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+        <link rel="stylesheet" href="styles/main.min.css">
+    </head>
+    <body>
+        <header class="header">
+	<section class="mob-header">
+		<div class="container mob-header__container">
+			<a href="/" class="mob-header__logo">
+				<img src="img/logo.svg" alt="Логотип БалтикNews">
+			</a>
+			<a href="#menu" class="mob-header__menu">
+				<svg class="icon-svg">
+					<use xlink:href="img/sprites/sprite.svg#icon-menu"></use>
+				</svg>
+			</a>
+		</div>
+	</section>
+	<section class="player">
+		<div class="container player__container">
+			<button class="player__btn player__btn--disabled">
+				<svg class="icon-svg player__btn-icon--play">
+					<use xlink:href="img/sprites/sprite.svg#icon-play"></use>
+				</svg>
+				<svg class="icon-svg player__btn-icon--pause">
+					<use xlink:href="img/sprites/sprite.svg#icon-pause"></use>
+				</svg>
+				<div class="loading"></div>
+			</button>
+			<div class="player__content">
+				<div class="player__nav">
+					<p class="player__title">
+						Новости часа
+					</p>
+					<time class="player__time">
+						03:20
+					</time>
+				</div>
+				<div class="swiper-container player__line">
+					<div class="swiper-wrapper">
+						<span class="swiper-slide player__article">
+							Ростуризм насчитал в Италии, где растёт число заражённых короновирусом, около семи тысяч российских туристов.
+						</span>
+						<span class="swiper-slide player__article">
+							В Москве ограничат массовые мероприятия свыше 5 тыс человек
+						</span>
+						<span class="swiper-slide player__article">
+							Nulla culpa dolor labore in fugiat ut voluptate incididunt et eu sint nulla aliquip.
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="nav">
+		<div class="container nav__container">
+			<nav class="nav__links">
+				<a href="news.html" class="nav__link">
+					Медицина
+				</a>
+				<a href="news.html" class="nav__link">
+					Культура
+				</a>
+				<a href="news.html" class="nav__link">
+					Общество
+				</a>
+				<a href="news.html" class="nav__link">
+					Политика
+				</a>
+				<a href="news.html" class="nav__link">
+					Экономика
+				</a>
+				<a href="news.html" class="nav__link">
+					Спорт
+				</a>
+				<a href="news.html" class="nav__link">
+					Путешествия
+				</a>
+			</nav>
+			<div class="nav__toolbar">
+				<a href="news.html" class="nav__link-all">
+					<span>
+						Все новости
+					</span>
+					<svg class="icon-svg">
+						<use xlink:href="img/sprites/sprite.svg#icon-arrow-news"></use>
+					</svg>
+				</a>
+				<button class="nav__search-btn">
+					<svg class="icon-svg">
+						<use xlink:href="img/sprites/sprite.svg#icon-search"></use>
+					</svg>
+				</button>
+			</div>
+			<form action="POST" class="h-search">
+				<input type="text" placeholder="Поиск" class="h-search__input">
+				<div class="h-search__toolbar">
+					<button class="h-search__btn h-search__btn--submit">
+						<svg class="icon-svg">
+							<use xlink:href="img/sprites/sprite.svg#icon-search"></use>
+						</svg>
+					</button>
+					<div class="h-search__sep"></div>
+					<button class="h-search__btn h-search__btn--close">
+						<svg class="icon-svg">
+							<use xlink:href="img/sprites/sprite.svg#icon-close"></use>
+						</svg>
+					</button>
+				</div>
+			</form>
+		</div>
+	</section>
+	
+</header>
+        <h1>New Page</h1>
+        <footer class="footer layout__footer">
+	<div class="footer__toolbar">
+		<div class="footer__nav">
+			<a href="" class="footer__link">
+				Главная
+			</a>
+			<a href="" class="footer__link">
+				Пресс-центр
+			</a>
+			<a href="" class="footer__link">
+				Рекламодателям
+			</a>
+			<a href="" class="footer__link">
+				Контакты
+			</a>
+		</div>
+		<div class="footer__socials socials">
+			<a href="" class="socials__link">
+				<svg class="icon-svg">
+					<use xlink:href="img/sprites/sprite.svg#icon-vk"></use>
+				</svg>
+			</a>
+			<a href="" class="socials__link">
+				<svg class="icon-svg">
+					<use xlink:href="img/sprites/sprite.svg#icon-instagram"></use>
+				</svg>
+			</a>
+			<a href="" class="socials__link">
+				<svg class="icon-svg">
+					<use xlink:href="img/sprites/sprite.svg#icon-facebook"></use>
+				</svg>
+			</a>
+			<a href="" class="socials__link">
+				<svg class="icon-svg">
+					<use xlink:href="img/sprites/sprite.svg#icon-youtube"></use>
+				</svg>
+			</a>
+		</div>
+	</div>
+	<div class="footer__content text">
+		<p>
+			Информационное агентство «Балтик Ньюс» зарегистрировано федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор). Номер свидетельства ИА № ФС 77-76904 от 09.10.2019 года.
+		</p>
+		<p>
+			<strong>Учредитель:</strong> ЗАО «Балтик Плюс» <br>
+			<strong>Главный редактор:</strong> Стародворский Анатолий Геннадьевич <br>
+			<strong>Адрес:</strong> 226023, г.Калининград,ул.Яналова,2 <br>
+			<strong>Редакция:</strong> (4012) 966-205, <a href="mailto:ria@balticnews.ru">ria@balticnews.ru</a> <br>
+			<strong>Реклама:</strong> (4012) 527-107, <a href="mailto:info@balticnews.ru">info@balticnews.ru</a>
+		</p>
+		<p>
+			Материалы с пометками PR, Business публикуются на коммерческой основе.
+		</p>
+		<p>
+			Все материалы сайта доступны по лицензии Creative Commons «Attribution-ShareAlike» («Атрибуция — На тех же условиях») 4.0 Всемирная.
+		</p>
+		<p>
+			Нашли ошибку? Cообщить об ошибке можно, выделив ее и нажав <span class="accent-block">Ctrl+Enter</span>
+		</p>
+	</div>
+	<a href="" class="footer__privacy">Политика конфиденциальности персональных данных</a>
+	<p class="footer__discript">
+		© 2019 «Балтик Плюс» 12+. Все права защищены. <br>
+		Разработано <a href="https://diez.io/">#dieztech</a>
+	</p>
+</footer>
+        <script src="js/pageB.min.js"></script>
+        <script src="js/vendor.min.js"></script>
+    </body>
+</html>

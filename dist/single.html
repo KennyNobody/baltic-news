@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Вполне себе самостоятельная египетская летучая собака</title>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="theme-color" content="#fff">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+<link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+<link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+<link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+<link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/main.min.css">
+</head>
+<body class="body">
+    <div class="layout">
+        <header class="header">
+	<section class="mob-header">
+		<div class="container mob-header__container">
+			<a href="/" class="mob-header__logo">
+				<img src="img/logo.svg" alt="Логотип БалтикNews">
+			</a>
+			<a href="#menu" class="mob-header__menu">
+				<svg class="icon-svg">
+					<use xlink:href="img/sprites/sprite.svg#icon-menu"></use>
+				</svg>
+			</a>
+		</div>
+	</section>
+	<section class="player">
+		<div class="container player__container">
+			<button class="player__btn player__btn--disabled">
+				<svg class="icon-svg player__btn-icon--play">
+					<use xlink:href="img/sprites/sprite.svg#icon-play"></use>
+				</svg>
+				<svg class="icon-svg player__btn-icon--pause">
+					<use xlink:href="img/sprites/sprite.svg#icon-pause"></use>
+				</svg>
+				<div class="loading"></div>
+			</button>
+			<div class="player__content">
+				<div class="player__nav">
+					<p class="player__title">
+						Новости часа
+					</p>
+					<time class="player__time">
+						03:20
+					</time>
+				</div>
+				<div class="swiper-container player__line">
+					<div class="swiper-wrapper">
+						<span class="swiper-slide player__article">
+							Ростуризм насчитал в Италии, где растёт число заражённых короновирусом, около семи тысяч российских туристов.
+						</span>
+						<span class="swiper-slide player__article">
+							В Москве ограничат массовые мероприятия свыше 5 тыс человек
+						</span>
+						<span class="swiper-slide player__article">
+							Nulla culpa dolor labore in fugiat ut voluptate incididunt et eu sint nulla aliquip.
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="nav">
+		<div class="container nav__container">
+			<nav class="nav__links">
+				<a href="news.html" class="nav__link">
+					Медицина
+				</a>
+				<a href="news.html" class="nav__link">
+					Культура
+				</a>
+				<a href="news.html" class="nav__link">
+					Общество
+				</a>
+				<a href="news.html" class="nav__link">
+					Политика
+				</a>
+				<a href="news.html" class="nav__link">
+					Экономика
+				</a>
+				<a href="news.html" class="nav__link">
+					Спорт
+				</a>
+				<a href="news.html" class="nav__link">
+					Путешествия
+				</a>
+			</nav>
+			<div class="nav__toolbar">
+				<a href="news.html" class="nav__link-all">
+					<span>
+						Все новости
+					</span>
+					<svg class="icon-svg">
+						<use xlink:href="img/sprites/sprite.svg#icon-arrow-news"></use>
+					</svg>
+				</a>
+				<button class="nav__search-btn">
+					<svg class="icon-svg">
+						<use xlink:href="img/sprites/sprite.svg#icon-search"></use>
+					</svg>
+				</button>
+			</div>
+			<form action="POST" class="h-search">
+				<input type="text" placeholder="Поиск" class="h-search__input">
+				<div class="h-search__toolbar">
+					<button class="h-search__btn h-search__btn--submit">
+						<svg class="icon-svg">
+							<use xlink:href="img/sprites/sprite.svg#icon-search"></use>
+						</svg>
+					</button>
+					<div class="h-search__sep"></div>
+					<button class="h-search__btn h-search__btn--close">
+						<svg class="icon-svg">
+							<use xlink:href="img/sprites/sprite.svg#icon-close"></use>
+						</svg>
+					</button>
+				</div>
+			</form>
+		</div>
+	</section>
+	
+</header>
+        <div class="container">
+            <div class="layout__content">
+                <aside class="layout__sidebar layout__sidebar--left">
+	<div class="info">
+		<a href="/" class="info__logo">
+			<img src="img/logo.svg" alt="Логотип БалтикNews">
+		</a>
+		<div class="info__line">
+			<time class="info__time-now">
+				Вторник, 10 марта 2020
+			</time>
+		</div>
+		<div class="info__line">
+			<p class="info__title">
+				<span class="info__title--text">курс валют ЦБ РФ</span>
+			</p>
+			<div class="info__block">
+				<div class="change">
+					<div class="change__title">
+						<span>
+							USD
+						</span>
+						<svg class="icon-svg">
+							<use xlink:href="img/sprites/sprite.svg#icon-arrow-red"></use>
+						</svg>
+					</div>
+					<p class="change__content">
+						65,67
+					</p>
+				</div>
+				<div class="change">
+					<div class="change__title">
+						<span>
+							EUR
+						</span>
+						<svg class="icon-svg">
+							<use xlink:href="img/sprites/sprite.svg#icon-arrow-red"></use>
+						</svg>
+					</div>
+					<p class="change__content">
+						71,65
+					</p>
+				</div>
+				<div class="change">
+					<div class="change__title">
+						<span>
+							PLN
+						</span>
+						<svg class="icon-svg">
+							<use xlink:href="img/sprites/sprite.svg#icon-arrow-green"></use>
+						</svg>
+					</div>
+					<p class="change__content">
+						17,02
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="info__line">
+			<p class="info__title">
+				<span class="info__title--text">курс валют на Бирже</span>
+			</p>
+			<div class="info__block">
+				<div class="change">
+					<div class="change__title">
+						<span>
+							USD
+						</span>
+						<svg class="icon-svg">
+							<use xlink:href="img/sprites/sprite.svg#icon-arrow-red"></use>
+						</svg>
+					</div>
+					<p class="change__content">
+						65,67
+					</p>
+				</div>
+				<div class="change">
+					<div class="change__title">
+						<span>
+							EUR
+						</span>
+						<svg class="icon-svg">
+							<use xlink:href="img/sprites/sprite.svg#icon-arrow-red"></use>
+						</svg>
+					</div>
+					<p class="change__content">
+						71,65
+					</p>
+				</div>
+				<div class="change">
+					<div class="change__title">
+						<span>
+							PLN
+						</span>
+						<svg class="icon-svg">
+							<use xlink:href="img/sprites/sprite.svg#icon-arrow-green"></use>
+						</svg>
+					</div>
+					<p class="change__content">
+						17,02
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="info__line">
+			<p class="info__title">
+				<span class="info__title--text">t° воздуха</span>
+			</p>
+		</div>
+		<div class="info__line">
+			<p class="info__title">
+				<span class="info__title--text">t° воды в море</span>
+			</p>
+		</div>
+		<div class="info__line">
+			<p class="info__title">
+				<span class="info__title--text">Дорожная ситуация</span>
+			</p>
+		</div>
+		<div class="info__line">
+			<p class="info__title">
+				<span class="info__title--text">очередь на границе</span>
+				<span>
+					
+				</span>
+			</p>
+		</div>
+		<a href="#modal-news" class="info__btn open-modal">
+			Написать в редакцию
+		</a>
+		
+	</div>
+</aside>
+                <main class="layout__main">
+                    <div class="layout__main--top">
+                        
+                        <div class="single">
+                            <h1 class="single__title">
+                                Вполне себе самостоятельная египетская летучая собака
+                            </h1>
+                            <div class="single__meta">
+                                <div class="meta">
+                                    <i class="fas fa-clock meta__icon"></i>
+                                    <time class="meta__time">
+                                        5 марта 2020, 12:57
+                                    </time>
+                                    <i class="fas fa-comment-alt meta__icon"></i>
+                                    <span class="meta__comment-count">
+                                        25
+                                    </span>
+                                </div>
+                                <p class="single__author">
+                                    Автор: Кайрис Владимир
+                                </p>
+                            </div>
+                            <div class="single__content text">
+                                <figure>
+                                    <picture>
+                                        <source type="image/webp" srcset="img/image-2.webp"></source>
+                                        <img src="img/image-2.jpg" alt="Иллюстрация">
+                                    </picture>
+                                    <figcaption>
+                                        ФОТО: РИА Новости/Алексей Никольский
+                                    </figcaption>
+                                </figure>
+                                <p>
+                                    Спортивный комментатор Дмитрий Губерниев заявил, что располагает копиями документов из Италии, свидетельствующими, <b>жирный</b> что донос на биатлониста Александра Логинова написала девушка, опираясь на <i>наклонный</i> слова экс-главы Союза биатлонистов России (СБР) Александра Тихонова. Во время чемпионата мира в итальянской Антерсельве местная полиция пришла с обысками в номера Логинова и его личного тренера Александра Касперовича. Сообщалось, что интерес правоохранителей вызвали аккредитация Касперовича, а также препараты и лекарства.
+                                </p>
+                                <blockquote>
+                                    Сообщалось, что интерес правоохранителей вызвали аккредитация Касперовича, а также препараты и лекарства.
+                                </blockquote>
+                                <ul>
+                                    <li>
+                                        Пункт
+                                    </li>
+                                    <li>
+                                        Пункт
+                                    </li>
+                                    <li>
+                                        Пункт
+                                    </li>
+                                </ul>
+                                <ol>
+                                    <li>
+                                        Пункт
+                                    </li>
+                                    <li>
+                                        Пункт
+                                    </li>
+                                    <li>
+                                        Пункт
+                                    </li>
+                                </ol>
+                                <p>
+                                    Позже Губерниев в интервью «Чемпионат.com» объяснил, что информатор по делу, исполняющая обязанности антидопингового менеджера IBU Сара Фуссек, взяла за основу интервью Тихонова, в котором тот говорит об украинской аккредитации. «Тихонов на чемпионате мира ходил и разговаривал со многими людьми. Мы же не знаем, что ещё он мог сказать в своей ненависти к нынешней России, Драчёву и СБР», - добавил журналист.
+                                </p>
+                                <div class="single__inernal-article">
+                                    <a href="single.html" class="article article--card article--inside">
+                                        <div class="article__thumb">
+                                            <img src="http://placehold.it/900x600" alt="Заголовок новости">
+                                        </div>
+                                        <div class="article__content">
+                                            <div class="tags">
+                                                <div class="tags__item">
+                                                    Общество
+                                                </div>
+                                            </div>
+                                            <h2 class="article__title">
+                                                Вполне себе самостоятельная египетская летучая собака
+                                            </h2>
+                                            <div class="article__toolbar meta">
+                                                <i class="fas fa-clock meta__icon"></i>
+                                                <time class="meta__time">
+                                                    5 марта 2020, 12:57
+                                                </time>
+                                                <i class="fas fa-comment-alt meta__icon"></i>
+                                                <span class="meta__comment-count">
+                                                    25
+                                                </span>
+                                            </div>
+                                            <p class="article__text">
+                                                В солнечную, не особо ветреную погоду кое-кого выпускают из закрытых для посетителей павильонов.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <p>
+                                    Не было с моей стороны никогда и ничего. Единственное - мы помогали все три года Логинову и Касперовичу, вот это была наша помощь. А заниматься провокациями в отношении того, чему отдана моя жизнь, - это не в моих понятиях. Это Драчёв и Губерниев. Драчёв – это преступник. У меня на сайте есть письмо, что его будут лишать депутатского иммунитета за его бывшую работу. Вот они и объединились, развалив весь биатлон до основания. Есть данные из Международной федерации. Ни-че-го с моей стороны не было! Это его отсебятина, только и всего», - подчеркнул Тихонов в беседе с НСН.Не было с моей стороны никогда и ничего. Единственное - мы помогали все три года Логинову и Касперовичу, вот это была наша помощь. А заниматься провокациями в отношении того, чему отдана моя жизнь, - это не в моих понятиях. Это Драчёв и Губерниев. Драчёв – это преступник. У меня на сайте есть письмо, что его будут лишать депутатского иммунитета за его бывшую работу. Вот они и объединились, развалив весь биатлон до основания. Есть данные из Международной федерации. Ни-че-го с моей стороны не было! Это его отсебятина, только и всего», - подчеркнул Тихонов в беседе с НСН.
+                                </p>
+                                <div class="audio" data-sound="http://d.zaix.ru/k9k8.mp3">
+                                    <button class="audio__btn audio__btn--pause">
+                                        <svg class="icon-svg audio__btn-icon--play">
+                                            <use xlink:href="img/sprites/sprite.svg#icon-play"></use>
+                                        </svg>
+                                        <svg class="icon-svg audio__btn-icon--pause">
+                                            <use xlink:href="img/sprites/sprite.svg#icon-pause"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="audio__main">
+                                        <div class="audio__time">
+                                            03:20
+                                        </div>
+                                        <div class="audio__progress">
+                                            <div id="progress" class="audio__now" style="width: 0%;"></div>
+                                        </div>
+                                        <div class="audio__name">
+                                            Вполне себе самостоятельная египетская летучая собака
+                                        </div>
+                                    </div>
+                                    <!-- <div class="volume">
+                                        <div class="volume__bar-empty"></div>
+                                        <div class="volume__bar-full" id="volume__barFull"></div>
+                                        <div class="volume__btn" id="sliderBtn"></div>
+                                    </div> -->
+                                </div>
+                                <p>
+                                    Говоря о депутатском иммунитете, Тихонов, вероятно, имел в виду историю со следствием по делу о мошенничестве с землёй в Ленобласти, в котором ФСБ ищет роль Драчёва - депутата Госдумы и экс-главы администрации Всеволожского района.
+                                </p>
+                                <a href="" class="btn">
+                                    <svg class="icon-svg">
+                                        <use xlink:href="img/sprites/sprite.svg#icon-file"></use>
+                                    </svg>
+                                    <span>
+                                        Постановление №453.pdf
+                                    </span>
+                                </a>
+                                <a href="" class="btn">
+                                    <svg class="icon-svg">
+                                        <use xlink:href="img/sprites/sprite.svg#icon-file"></use>
+                                    </svg>
+                                    <span>
+                                        Постановление №453.pdf
+                                    </span>
+                                </a>
+                                <p>
+                                    Ранее Губерниев практически назвал Тихонова «старым пердуном», а Тихонов в ответ назвал комментатора «губошлёпом» и прошёлся по внешнему виду журналиста, заявив, что сам он в свои 73 года выглядит лучше.
+                                </p>
+                            </div>
+                            <div class="single__info">
+                                <p class="single__info-line">
+                                    <strong>Теги:</strong> <a href="">Госдума</a>, <a href="">Валентина Терешкова</a>, <a href="">Владимир Путин</a>, <a href="">Конституция</a>
+                                </p>
+                                <p class="single__info-line">
+                                    <strong>Источник:</strong> <a href="https://sptnkne.ws/Bxat">https://sptnkne.ws/Bxat</a>
+                                </p>
+                                <p class="single__info-line">
+                                    <strong>Мы в:</strong> 
+                                    <a href="">Яндекс.Новости</a>,
+                                    <a href="">Яндекс. Дзен</a>,
+                                    <a href="">Google News</a>,
+                                    <a href="">Telegram</a>,
+                                    <a href="">Twitter</a>
+                                </p>
+                            </div>
+                            <div class="single__btns">
+                                <a href="" class="btn btn--accent">
+                                    <svg class="icon-svg">
+                                        <use xlink:href="img/sprites/sprite.svg#icon-share"></use>
+                                    </svg>
+                                    <span>
+                                        Поделиться
+                                    </span>
+                                </a>
+                                <!-- <a href="" class="btn btn--gray">
+                                    <span>
+                                        Комментировать (4)
+                                    </span>
+                                </a> -->
+                            </div>
+                        </div>
+                        <div class="toolbar">
+                            <a href="" class="toolbar__link toolbar__link--back">
+                                <svg class="icon-svg">
+                                    <use xlink:href="img/sprites/sprite.svg#icon-arrow-top"></use>
+                                </svg>
+                                <span>
+                                    Назад
+                                </span>
+                            </a>
+                            <a href="" class="toolbar__link toolbar__link--top">
+                                <svg class="icon-svg">
+                                    <use xlink:href="img/sprites/sprite.svg#icon-arrow-top"></use>
+                                </svg>
+                                <span>
+                                    Наверх
+                                </span>
+                            </a>
+                        </div>
+                        <div class="comments">
+                            Блок комментариев discuss
+                        </div>
+                        <div class="news">
+                            <p class="news__title">
+                                Новости по этой теме
+                            </p>
+                            <div class="news__content">
+                                <a href="single.html" class="article article--card">
+                                    <div class="article__thumb">
+                                        <img src="http://placehold.it/900x600" alt="Заголовок новости">
+                                    </div>
+                                    <div class="article__content">
+                                        <div class="tags">
+                                            <div class="tags__item">
+                                                Общество
+                                            </div>
+                                        </div>
+                                        <h2 class="article__title">
+                                            Вполне себе самостоятельная египетская летучая собака
+                                        </h2>
+                                        <div class="article__toolbar meta">
+                                            <i class="fas fa-clock meta__icon"></i>
+                                            <time class="meta__time">
+                                                5 марта 2020, 12:57
+                                            </time>
+                                            <i class="fas fa-comment-alt meta__icon"></i>
+                                            <span class="meta__comment-count">
+                                                25
+                                            </span>
+                                        </div>
+                                        <p class="article__text">
+                                            В солнечную, не особо ветреную погоду кое-кого выпускают из закрытых для посетителей павильонов.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="single.html" class="article article--card">
+                                    <div class="article__thumb">
+                                        <img src="http://placehold.it/900x600" alt="Заголовок новости">
+                                    </div>
+                                    <div class="article__content">
+                                        <div class="tags">
+                                            <div class="tags__item">
+                                                Общество
+                                            </div>
+                                        </div>
+                                        <h2 class="article__title">
+                                            Вполне себе самостоятельная египетская летучая собака
+                                        </h2>
+                                        <div class="article__toolbar meta">
+                                            <i class="fas fa-clock meta__icon"></i>
+                                            <time class="meta__time">
+                                                5 марта 2020, 12:57
+                                            </time>
+                                            <i class="fas fa-comment-alt meta__icon"></i>
+                                            <span class="meta__comment-count">
+                                                25
+                                            </span>
+                                        </div>
+                                        <p class="article__text">
+                                            В солнечную, не особо ветреную погоду кое-кого выпускают из закрытых для посетителей павильонов.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="single.html" class="article article--card">
+                                    <div class="article__thumb">
+                                        <img src="http://placehold.it/900x600" alt="Заголовок новости">
+                                    </div>
+                                    <div class="article__content">
+                                        <div class="tags">
+                                            <div class="tags__item">
+                                                Общество
+                                            </div>
+                                        </div>
+                                        <h2 class="article__title">
+                                            Вполне себе самостоятельная египетская летучая собака
+                                        </h2>
+                                        <div class="article__toolbar meta">
+                                            <i class="fas fa-clock meta__icon"></i>
+                                            <time class="meta__time">
+                                                5 марта 2020, 12:57
+                                            </time>
+                                            <i class="fas fa-comment-alt meta__icon"></i>
+                                            <span class="meta__comment-count">
+                                                25
+                                            </span>
+                                        </div>
+                                        <p class="article__text">
+                                            В солнечную, не особо ветреную погоду кое-кого выпускают из закрытых для посетителей павильонов.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="single.html" class="article article--card">
+                                    <div class="article__thumb">
+                                        <img src="http://placehold.it/900x600" alt="Заголовок новости">
+                                    </div>
+                                    <div class="article__content">
+                                        <div class="tags">
+                                            <div class="tags__item">
+                                                Общество
+                                            </div>
+                                        </div>
+                                        <h2 class="article__title">
+                                            Вполне себе самостоятельная египетская летучая собака
+                                        </h2>
+                                        <div class="article__toolbar meta">
+                                            <i class="fas fa-clock meta__icon"></i>
+                                            <time class="meta__time">
+                                                5 марта 2020, 12:57
+                                            </time>
+                                            <i class="fas fa-comment-alt meta__icon"></i>
+                                            <span class="meta__comment-count">
+                                                25
+                                            </span>
+                                        </div>
+                                        <p class="article__text">
+                                            В солнечную, не особо ветреную погоду кое-кого выпускают из закрытых для посетителей павильонов.
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layout__main--bottom">
+                        <footer class="footer layout__footer">
+	<div class="footer__toolbar">
+		<div class="footer__nav">
+			<a href="" class="footer__link">
+				Главная
+			</a>
+			<a href="" class="footer__link">
+				Пресс-центр
+			</a>
+			<a href="" class="footer__link">
+				Рекламодателям
+			</a>
+			<a href="" class="footer__link">
+				Контакты
+			</a>
+		</div>
+		<div class="footer__socials socials">
+			<a href="" class="socials__link">
+				<svg class="icon-svg">
+					<use xlink:href="img/sprites/sprite.svg#icon-vk"></use>
+				</svg>
+			</a>
+			<a href="" class="socials__link">
+				<svg class="icon-svg">
+					<use xlink:href="img/sprites/sprite.svg#icon-instagram"></use>
+				</svg>
+			</a>
+			<a href="" class="socials__link">
+				<svg class="icon-svg">
+					<use xlink:href="img/sprites/sprite.svg#icon-facebook"></use>
+				</svg>
+			</a>
+			<a href="" class="socials__link">
+				<svg class="icon-svg">
+					<use xlink:href="img/sprites/sprite.svg#icon-youtube"></use>
+				</svg>
+			</a>
+		</div>
+	</div>
+	<div class="footer__content text">
+		<p>
+			Информационное агентство «Балтик Ньюс» зарегистрировано федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор). Номер свидетельства ИА № ФС 77-76904 от 09.10.2019 года.
+		</p>
+		<p>
+			<strong>Учредитель:</strong> ЗАО «Балтик Плюс» <br>
+			<strong>Главный редактор:</strong> Стародворский Анатолий Геннадьевич <br>
+			<strong>Адрес:</strong> 226023, г.Калининград,ул.Яналова,2 <br>
+			<strong>Редакция:</strong> (4012) 966-205, <a href="mailto:ria@balticnews.ru">ria@balticnews.ru</a> <br>
+			<strong>Реклама:</strong> (4012) 527-107, <a href="mailto:info@balticnews.ru">info@balticnews.ru</a>
+		</p>
+		<p>
+			Материалы с пометками PR, Business публикуются на коммерческой основе.
+		</p>
+		<p>
+			Все материалы сайта доступны по лицензии Creative Commons «Attribution-ShareAlike» («Атрибуция — На тех же условиях») 4.0 Всемирная.
+		</p>
+		<p>
+			Нашли ошибку? Cообщить об ошибке можно, выделив ее и нажав <span class="accent-block">Ctrl+Enter</span>
+		</p>
+	</div>
+	<a href="" class="footer__privacy">Политика конфиденциальности персональных данных</a>
+	<p class="footer__discript">
+		© 2019 «Балтик Плюс» 12+. Все права защищены. <br>
+		Разработано <a href="https://diez.io/">#dieztech</a>
+	</p>
+</footer>
+                    </div>
+                </main>
+                <aside class="layout__sidebar layout__sidebar--right">
+	<a href="" class="promo-thumb">
+		<img src="img/promo-img-2.jpg" class="promo-thumb" alt="Картинка">
+	</a>
+	<div class="feed">
+		<p class="feed__title">
+			Лента новостей
+		</p>
+		<div class="feed__container">
+			<div class="feed__day">
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						06:46
+					</time>
+					<!-- Обрежь количество символов в заголовке до 80 -->
+					<span class="feed__article-title">
+						Ростуризм насчитал в Италии, где растёт число заражённых короновирусом, около семи тысяч... 
+						<i class="fas fa-camera"></i>
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						13:10
+					</time>
+					<span class="feed__article-title">
+						В Москве ограничат массовые мероприятия
+						<i class="fas fa-file"></i>
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						23:20
+					</time>
+					<span class="feed__article-title">
+						Esse aute aliqua nisi tempor velit et elit laboris exercitation anim pariatur incididunt officia. 
+						<i class="fas fa-volume-up"></i>
+						<span class="icon-text">
+							business
+						</span>
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						10:38
+					</time>
+					<span class="feed__article-title">
+						Quis id amet ea officia esse velit cupidatat quis et non.
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						17:00
+					</time>
+					<span class="feed__article-title">
+						Magna mollit anim et excepteur amet excepteur proident enim anim excepteur.
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						12:43
+					</time>
+					<span class="feed__article-title">
+						Nulla culpa dolor labore in fugiat ut voluptate incididunt et eu sint nulla aliquip.
+						<span class="icon-text">
+							pr
+						</span>
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						00:04
+					</time>
+					<span class="feed__article-title">
+						Laboris occaecat nulla ipsum non
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						03:44
+					</time>
+					<span class="feed__article-title">
+						Irure eu qui est deserunt.
+						<span class="icon-text">
+							business
+						</span>
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						06:46
+					</time>
+					<span class="feed__article-title">
+						Consectetur tempor ex deserunt dolor est veniam dolor pariatur.
+						<span class="icon-text">
+							pr
+						</span>
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						13:10
+					</time>
+					<span class="feed__article-title">
+						Elit sit esse sint culpa in.
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						23:20
+					</time>
+					<span class="feed__article-title">
+						Esse aute aliqua nisi tempor velit et elit laboris exercitation anim pariatur incididunt officia.
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						10:38
+					</time>
+					<span class="feed__article-title">
+						Quis id amet ea officia esse velit cupidatat quis et non.
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						17:00
+					</time>
+					<span class="feed__article-title">
+						Magna mollit anim et excepteur amet excepteur proident enim anim excepteur.
+						<i class="far fa-images"></i>
+					</span>
+				</a>
+			</div>
+			<div class="feed__day">
+				<p class="feed__day-title">
+					Вчера
+				</p>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						06:46
+					</time>
+					<span class="feed__article-title">
+						Ростуризм насчитал в Италии, где растёт число заражённых короновирусом, около семи тысяч... 
+						<i class="fas fa-camera"></i>
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						13:10
+					</time>
+					<span class="feed__article-title">
+						В Москве ограничат массовые мероприятия
+						<i class="fas fa-file"></i>
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						23:20
+					</time>
+					<span class="feed__article-title">
+						Esse aute aliqua nisi tempor velit et elit laboris exercitation anim pariatur incididunt officia. 
+						<i class="fas fa-volume-up"></i>
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						10:38
+					</time>
+					<span class="feed__article-title">
+						Quis id amet ea officia esse velit cupidatat quis et non.
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						17:00
+					</time>
+					<span class="feed__article-title">
+						Magna mollit anim et excepteur amet excepteur proident enim anim excepteur.
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						12:43
+					</time>
+					<span class="feed__article-title">
+						Nulla culpa dolor labore in fugiat ut voluptate incididunt et eu sint nulla aliquip.
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						00:04
+					</time>
+					<span class="feed__article-title">
+						Laboris occaecat nulla ipsum non
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						03:44
+					</time>
+					<span class="feed__article-title">
+						Irure eu qui est deserunt.
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						06:46
+					</time>
+					<span class="feed__article-title">
+						Consectetur tempor ex deserunt dolor est veniam dolor pariatur.
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						13:10
+					</time>
+					<span class="feed__article-title">
+						Elit sit esse sint culpa in.
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						23:20
+					</time>
+					<span class="feed__article-title">
+						Esse aute aliqua nisi tempor velit et elit laboris exercitation anim pariatur incididunt officia.
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						10:38
+					</time>
+					<span class="feed__article-title">
+						Quis id amet ea officia esse velit cupidatat quis et non.
+					</span>
+				</a>
+				<a href="single.html" class="feed__article">
+					<time class="feed__time">
+						17:00
+					</time>
+					<span class="feed__article-title">
+						Magna mollit anim et excepteur amet excepteur proident enim anim excepteur.
+						<i class="fas fa-video"></i>
+					</span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="archive">
+	<div class="archive__title">
+		Архив новостей
+	</div>
+	<input class="archive__link" type="text" name="dates" placeholder="Выбрать период">
+</div>
+	<a href="" class="promo-thumb">
+		<img src="img/promo-img-3.jpg" class="promo-thumb" alt="Картинка">
+	</a>
+</aside>
+            </div>
+        </div>
+    </div>
+    <script>
+    // Ссылки на соцсети для мобильного меню
+    var links = [
+    "<a class='fab fa-vk' href='#/'></a>",
+    "<a class='fa fa-facebook' href='#/'></a>",
+    "<a class='fab fa-instagram' href='#/'></a>",
+    "<a class='fab fa-youtube' href='#/'></a>",
+    ]
+</script>
+
+<nav id="menu">
+    <ul>
+        <li><a href="/">Главная</a></li>
+        <li><a href="/news.html">Новости</a></li>
+        <li><span>Рубрики</span>
+            <ul>
+                <li><a href="/services/design">Рубрика</a></li>
+                <li><a href="/services/development">Рубрика</a></li>
+                <li><a href="/services/marketing">Рубрика</a></li>
+            </ul>
+        </li>
+        <li><a href="/contacts.html">Контакты</a></li>
+    </ul>
+</nav>
+    <div class="mfp-hide">
+	<form class="modal modal--write" id="modal-call">
+		<button class="modal__close">
+			×
+		</button>
+		<div class="modal__header">
+			<p class="modal__title">
+				Послать сообщение об ошибке автору?
+			</p>
+			<p class="modal__discript">
+				(ваш браузер останется на той же странице)
+			</p>
+		</div>
+		<div class="modal__content">
+			<label class="modal__label">
+				<p class="modal__input-title">
+					Найденная вами ошибка в тексте:
+				</p>
+				<textarea class="modal__input modal__input--inner"></textarea>
+			</label>
+			<label class="modal__label">
+				<p class="modal__input-title">
+					Комментарии для автора (необязательно):
+				</p>
+				<textarea class="modal__input"></textarea>
+			</label>
+		</div>
+		<div class="modal__footer">
+			<button class="modal__btn modal__btn--accept">
+				Отправить
+			</button>
+			<button class="modal__btn modal__btn--cancel">
+				Отмена
+			</button>
+		</div>
+	</form>
+
+	<form class="modal modal--news" id="modal-news">
+		<button class="modal__close">
+			×
+		</button>
+		<div class="modal__header">
+			<p class="modal__title">
+				Прислать новость в редакцию?
+			</p>
+			<p class="modal__discript">
+				(ваш браузер останется на той же странице)
+			</p>
+		</div>
+		<div class="modal__content">
+			<div class="modal__columns">
+				<div class="modal__column modal__column--left">
+					<label class="modal__label">
+						<p class="modal__input-title">
+							На какую тему вы хотите прислать новость?
+						</p>
+						<select class="modal__select">
+							<option value="1">Аварии на дороге</option>
+							<option value="2">Нашествие инопланетян</option>
+						</select>
+					</label>
+					<label class="modal__label">
+						<p class="modal__input-title">
+							Ваше сообщение:
+						</p>
+						<textarea class="modal__input"></textarea>
+					</label>
+				</div>
+				<div class="modal__column modal__column--right">
+					<!-- Вот это, наверное, имеет -->
+					<label class="modal__file-label file">
+						<input type="file">
+						<p class="file__title">
+							Прикрепите сюда фото или видео
+						</p>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="modal__footer">
+			<button class="modal__btn modal__btn--accept">
+				Отправить
+			</button>
+			<button class="modal__btn modal__btn--cancel">
+				Отмена
+			</button>
+		</div>
+	</form>
+</div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+</html>
