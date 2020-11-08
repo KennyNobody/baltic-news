@@ -11,5 +11,4 @@ import "%modules%/single/single";
 import "%modules%/layout__sidebar--left/sidebar-left";
 import "%modules%/1_now/now";
 import "%modules%/archive/archive";
-
-console.log($);
+import "./money.js";

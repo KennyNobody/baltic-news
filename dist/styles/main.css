@@ -4597,7 +4597,7 @@ i {
 
 .player__nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   color: #6F8488;
   margin-bottom: 3px;
 }
@@ -4605,6 +4605,10 @@ i {
 .player__line {
   overflow: hidden;
   white-space: nowrap;
+}
+
+.player__title {
+  margin-right: 10px;
 }
 
 .player__article {

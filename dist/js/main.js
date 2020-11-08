@@ -652,6 +652,10 @@ $(document).ready(function () {
   $('.modal__close').on('click', function (e) {
     e.preventDefault();
     $.magnificPopup.close();
+  });
+  $('.modal-close').on('click', function (e) {
+    e.preventDefault();
+    $.magnificPopup.close();
   }); // $(document).on('keydown',function (event) {
   // 	if (event.key == 13 && event.key == 17) {
   // 		console.log('Нажади')
@@ -1044,6 +1048,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_layout_sidebar_left_sidebar_left__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_modules_layout_sidebar_left_sidebar_left__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var _modules_1_now_now__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! %modules%/1_now/now */ "./src/blocks/modules/1_now/now.js");
 /* harmony import */ var _modules_archive_archive__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! %modules%/archive/archive */ "./src/blocks/modules/archive/archive.js");
+/* harmony import */ var _money_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./money.js */ "./src/js/import/money.js");
+/* harmony import */ var _money_js__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_money_js__WEBPACK_IMPORTED_MODULE_13__);
 
 
 
@@ -1057,7 +1063,27 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-console.log(jquery__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+
+/***/ }),
+
+/***/ "./src/js/import/money.js":
+/*!********************************!*\
+  !*** ./src/js/import/money.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {window.addEventListener('load', function () {
+  (function getMoney() {
+    $.getJSON("https://www.cbr-xml-daily.ru/daily_json.js", function (data) {
+      $('#usd-info').html(data.Valute.USD.Value.toFixed(2));
+      $('#eur-info').html(data.Valute.EUR.Value.toFixed(2));
+      $('#pln-info').html(data.Valute.PLN.Value.toFixed(2));
+    });
+  })();
+});
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 

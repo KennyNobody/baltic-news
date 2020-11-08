@@ -62,13 +62,16 @@
 	}
 	&__nav {
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-start;
 		color: #6F8488;
 		margin-bottom: 3px;
 	}
 	&__line {
 		overflow: hidden;
 		white-space: nowrap;
+	}
+	&__title {
+		margin-right: 10px;
 	}
 	&__article {
 		position: relative;
