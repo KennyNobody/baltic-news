@@ -59,11 +59,11 @@
 	}
 	&__block {
 		display: flex;
-		justify-content: space-between;
 	}
 }
 
 .change {
+	width: 35%;
 	&__title {
 		display: flex;
 		align-items: center;
@@ -77,7 +77,27 @@
 		svg {
 			height: 6px;
 			width: 8px;
-			display: block;
+			display: none;
+		}
+		&--up {
+			svg {
+				&:nth-child(1) {
+					display: block;
+				}
+				&:nth-child(2) {
+					display: block;
+				}
+			}
+		}
+		&--down {
+			svg {
+				&:nth-child(2) {
+					display: block;
+				}
+				&:nth-child(1) {
+					display: block;
+				}
+			}
 		}
 	}
 	&__content {

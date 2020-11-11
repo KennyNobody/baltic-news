@@ -4635,6 +4635,15 @@ i {
   display: none;
 }
 
+.player__article a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.player__article a:hover {
+  opacity: 0.7;
+}
+
 .swiper-wrapper {
   transition-timing-function: linear !important;
 }
@@ -5070,7 +5079,10 @@ i {
 
 .info__block {
   display: flex;
-  justify-content: space-between;
+}
+
+.change {
+  width: 35%;
 }
 
 .change__title {
@@ -5089,6 +5101,22 @@ i {
 .change__title svg {
   height: 6px;
   width: 8px;
+  display: none;
+}
+
+.change__title--up svg:nth-child(1) {
+  display: block;
+}
+
+.change__title--up svg:nth-child(2) {
+  display: block;
+}
+
+.change__title--down svg:nth-child(2) {
+  display: block;
+}
+
+.change__title--down svg:nth-child(1) {
   display: block;
 }
 
