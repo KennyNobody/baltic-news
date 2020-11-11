@@ -4616,6 +4616,12 @@ i {
   padding-right: 28px;
   margin-right: 20px;
   width: fit-content;
+  color: #000000;
+  text-decoration: none;
+}
+
+.player__article:hover {
+  opacity: 0.7;
 }
 
 .player__article:after {
@@ -4633,15 +4639,6 @@ i {
 
 .player__article:last-child:after {
   display: none;
-}
-
-.player__article a {
-  color: #000000;
-  text-decoration: none;
-}
-
-.player__article a:hover {
-  opacity: 0.7;
 }
 
 .swiper-wrapper {
@@ -5082,7 +5079,7 @@ i {
 }
 
 .change {
-  width: 35%;
+  width: calc(100% / 3);
 }
 
 .change__title {

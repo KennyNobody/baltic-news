@@ -63,7 +63,7 @@
 }
 
 .change {
-	width: 35%;
+	width: calc(100% / 3);
 	&__title {
 		display: flex;
 		align-items: center;
