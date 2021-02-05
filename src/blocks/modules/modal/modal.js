@@ -20,6 +20,11 @@ $(document).ready(function() {
 		$.magnificPopup.close();
 	});
 
+	$('.modal__btn--cancel').on('click', function(e){
+		e.preventDefault();                                                 
+		$.magnificPopup.close();
+	});
+
 	// $(document).on('keydown',function (event) {
 	// 	if (event.key == 13 && event.key == 17) {
 	// 		console.log('Нажади')

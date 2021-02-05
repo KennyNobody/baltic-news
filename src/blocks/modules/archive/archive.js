@@ -3,18 +3,11 @@
 import daterangepicker from 'daterangepicker';
 
 ( function initDatePicker(){
-	// $('input[name="dates"]').daterangepicker({
-	// 	singleDatePicker: true,
-	// 	opens: 'left',
-	// 	locale: {
-
-	// 	}
-	// });
 
 	$('input[name="dates"]').daterangepicker({
 		"timePicker24Hour": true,
 		"locale": {
-			"format": "MM/DD/YYYY",
+			"format": "DD.MM.YYYY",
 			"separator": " - ",
 			"applyLabel": "Принять",
 			"cancelLabel": "Отмена",
@@ -56,4 +49,11 @@ import daterangepicker from 'daterangepicker';
 		"applyButtonClasses": "archive__btn--submit",
 		"cancelClass": "archive__btn--cancel"
 	});
+
+	$('input[name="dates"]').on('change', function() {
+		let dateStart = this.value.split(' - ')[0];
+		let dateEnd = this.value.split(' - ')[1];
+
+		location.href = document.location.protocol + '//' + document.location.host + '/category/novosti/?datafrom=' + dateStart + '&datato=' + dateEnd;
+	})
 })();

@@ -526,16 +526,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 (function initDatePicker() {
-  // $('input[name="dates"]').daterangepicker({
-  // 	singleDatePicker: true,
-  // 	opens: 'left',
-  // 	locale: {
-  // 	}
-  // });
   $('input[name="dates"]').daterangepicker({
     "timePicker24Hour": true,
     "locale": {
-      "format": "MM/DD/YYYY",
+      "format": "DD.MM.YYYY",
       "separator": " - ",
       "applyLabel": "Принять",
       "cancelLabel": "Отмена",
@@ -555,6 +549,11 @@ __webpack_require__.r(__webpack_exports__);
     "buttonClasses": "archive__btn",
     "applyButtonClasses": "archive__btn--submit",
     "cancelClass": "archive__btn--cancel"
+  });
+  $('input[name="dates"]').on('change', function () {
+    var dateStart = this.value.split(' - ')[0];
+    var dateEnd = this.value.split(' - ')[1];
+    location.href = document.location.protocol + '//' + document.location.host + '/category/novosti/?datafrom=' + dateStart + '&datato=' + dateEnd;
   });
 })();
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
@@ -654,6 +653,10 @@ $(document).ready(function () {
     $.magnificPopup.close();
   });
   $('.modal-close').on('click', function (e) {
+    e.preventDefault();
+    $.magnificPopup.close();
+  });
+  $('.modal__btn--cancel').on('click', function (e) {
     e.preventDefault();
     $.magnificPopup.close();
   }); // $(document).on('keydown',function (event) {
@@ -1050,6 +1053,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_archive_archive__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! %modules%/archive/archive */ "./src/blocks/modules/archive/archive.js");
 /* harmony import */ var _money_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./money.js */ "./src/js/import/money.js");
 /* harmony import */ var _money_js__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_money_js__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _weather_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./weather.js */ "./src/js/import/weather.js");
+/* harmony import */ var _weather_js__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_weather_js__WEBPACK_IMPORTED_MODULE_14__);
+
 
 
 
@@ -1074,7 +1080,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {window.addEventListener('load', function () {
+/* WEBPACK VAR INJECTION */(function($) {document.addEventListener('DOMContentLoaded', function () {
   (function getMoneyBank() {
     $.getJSON("https://www.cbr-xml-daily.ru/daily_json.js", function (data) {
       $('#usd-info').html(data.Valute.USD.Value.toFixed(2));
@@ -1149,12 +1155,15 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {(function () {
-  var broadcastBtn = document.querySelector('.player__btn');
-  var broadcastLink = 'http://bp.koenig.ru:8000/Baltic_Plus_mp3_128.mp3';
+  var broadcastBtn = document.querySelector('.player__btn'); // let broadcastLink = 'http://bp.koenig.ru:8000/Baltic_Plus_mp3_128.mp3';
+
+  var broadcastLink = '/wp-content/themes/diez__template_balticnews/assets/sound.mp3';
+  var time = document.querySelector('.player__time');
+  var position = 0;
   var broadcast = new Howl({
     src: broadcastLink,
     // autoplay: true,
-    // preload: true,
+    preload: true,
     html5: true
   });
   broadcastBtn.addEventListener('click', function () {
@@ -1181,16 +1190,26 @@ __webpack_require__.r(__webpack_exports__);
     broadcastBtn.classList.remove('player__btn--disabled');
     broadcastBtn.classList.add('player__btn--pause');
     broadcastBtn.classList.remove('player__btn--playing');
+    time.classList.remove('player__time--hidden');
 
     if (player) {
       player.pause();
     }
+
+    var position;
+    setInterval(function tick() {
+      position = broadcast.seek();
+      var minutes = Math.floor(position / 60);
+      var seconds = Math.floor(position % 60); // console.log();
+
+      time.innerText = minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');
+    }, 1000); // var hours = Math.floor(timestamp / 60 / 60);
   });
   broadcast.on('pause', function () {
     broadcastBtn.classList.remove('player__btn--disabled');
     broadcastBtn.classList.remove('player__btn--pause');
     broadcastBtn.classList.add('player__btn--playing');
-    broadcast.unload();
+    time.classList.add('player__time--hidden'); // broadcast.unload();
   }); // Дальше идет плеер внутренний
 
   var utils = {
@@ -1263,6 +1282,36 @@ __webpack_require__.r(__webpack_exports__);
     });
   }
 })();
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
+
+/***/ "./src/js/import/weather.js":
+/*!**********************************!*\
+  !*** ./src/js/import/weather.js ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {document.addEventListener('DOMContentLoaded', function () {
+  (function getWeather() {
+    var apiKey = 'ed1d68f4ad14003c568ffd93d53bb0f9';
+    var iconUrl = 'http://openweathermap.org/img/w/';
+    var temperature;
+    var icon;
+    var text;
+    var iconParent = document.querySelector('.weather__icon');
+    var textParent = document.querySelector('.weather__text');
+    $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=kaliningrad&appid=" + apiKey + "&lang=ru&units=metric").done(function (data) {
+      icon = iconUrl + data.weather[0].icon + '.png';
+      iconParent.setAttribute("style", "background-image: url('" + icon + "')");
+      text = Math.round(data.main.temp) + '°C ' + data.name;
+      textParent.innerText = text;
+    }).fail(function (data) {
+      console.log("Ошибка получения данных от биржи ММВБ");
+    });
+  })();
+});
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),

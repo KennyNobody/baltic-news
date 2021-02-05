@@ -73,6 +73,13 @@
 	&__title {
 		margin-right: 10px;
 	}
+	&__time {
+		opacity: 1;
+		transition: 0.3s all;
+		&--hidden {
+			opacity: 0;
+		}
+	}
 	&__article {
 		position: relative;
 		padding-right: 28px;

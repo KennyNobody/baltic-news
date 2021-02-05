@@ -17,6 +17,14 @@
 		font-style: italic;
 		font-size: 16px;
 	}
+	&__content {
+		&--light {
+			background-color: $light;
+			margin-bottom: 80px;
+			padding: 20px 20px 25px 20px;
+			border-radius: 10px;
+		}
+	}
 	&__inernal-article {
 		width: 372px;
 		float: right;
@@ -51,5 +59,15 @@
 	&__btns {
 		display: flex;
 		flex-wrap: wrap;
+		align-items: center;
+		@include r(750) {
+			display: block;
+		}
+		.btn {
+			margin-bottom: 0;
+			@include r(750) {
+				margin-bottom: 15px;
+			}
+		}
 	}
 }

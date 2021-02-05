@@ -12,3 +12,4 @@ import "%modules%/layout__sidebar--left/sidebar-left";
 import "%modules%/1_now/now";
 import "%modules%/archive/archive";
 import "./money.js";
+import "./weather.js";

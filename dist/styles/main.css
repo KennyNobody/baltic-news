@@ -4263,6 +4263,8 @@ i {
   font-size: 16px;
   color: #006A6A;
   text-decoration: underline;
+  background-color: inherit;
+  cursor: pointer;
 }
 
 .archive__link:hover {
@@ -4319,6 +4321,13 @@ i {
   font-size: 16px;
 }
 
+.single__content--light {
+  background-color: #ffffff;
+  margin-bottom: 80px;
+  padding: 20px 20px 25px 20px;
+  border-radius: 10px;
+}
+
 .single__inernal-article {
   width: 372px;
   float: right;
@@ -4356,6 +4365,11 @@ i {
 .single__btns {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+}
+
+.single__btns .btn {
+  margin-bottom: 0;
 }
 
 .mm-navbar a {
@@ -4609,6 +4623,15 @@ i {
 
 .player__title {
   margin-right: 10px;
+}
+
+.player__time {
+  opacity: 1;
+  transition: 0.3s all;
+}
+
+.player__time--hidden {
+  opacity: 0;
 }
 
 .player__article {
@@ -4878,6 +4901,12 @@ i {
 
 .toolbar__link--more {
   color: #6F8488;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.toolbar__link--more:hover {
+  opacity: 0.7;
 }
 
 .toolbar__link--more span {
@@ -5121,6 +5150,20 @@ i {
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
+}
+
+.weather {
+  display: flex;
+  align-items: center;
+}
+
+.weather__icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 7px;
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .feed {
@@ -5383,6 +5426,7 @@ i {
   .archive {
     display: block;
     padding: 0px;
+    background: none;
   }
 
   .archive__title {
@@ -5420,6 +5464,7 @@ i {
 
   .feed {
     padding: 0px;
+    background: none;
   }
 }
 
@@ -5530,6 +5575,22 @@ i {
 }
 
 @media only screen and (max-width: 750px) {
+  .footer__link {
+    margin-bottom: 5px;
+  }
+
+  .single__btns {
+    display: block;
+  }
+
+  .single__btns .btn {
+    margin-bottom: 15px;
+  }
+
+  .modal {
+    padding: 55px 20px 30px 20px;
+  }
+
   .modal__header {
     margin-bottom: 25px;
   }

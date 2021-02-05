@@ -5,6 +5,7 @@
 	border-radius: 10px;
 	@include r(1260) {
 		padding: 0px;
+		background: none;
 	}
 	&__title {
 		padding-bottom: 18px;

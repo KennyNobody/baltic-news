@@ -41,6 +41,11 @@
 		}
 		&--more {
 			color: #6F8488;
+			cursor: pointer;
+			transition: 0.3s all;
+			&:hover {
+				opacity: 0.7;
+			}
 			span {
 				margin-right: 15px;
 			}

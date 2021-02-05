@@ -1,11 +1,15 @@
 (function(){
 	const broadcastBtn = document.querySelector('.player__btn');
-	let broadcastLink = 'http://bp.koenig.ru:8000/Baltic_Plus_mp3_128.mp3';
+	// let broadcastLink = 'http://bp.koenig.ru:8000/Baltic_Plus_mp3_128.mp3';
+	let broadcastLink = '/wp-content/themes/diez__template_balticnews/assets/sound.mp3';
+
+	let time = document.querySelector('.player__time');
+	let position = 0;
 	
 	let broadcast = new Howl({
 		src: broadcastLink,
 		// autoplay: true,
-		// preload: true,
+		preload: true,
 		html5: true
 	});
 
@@ -35,16 +39,37 @@
 		broadcastBtn.classList.remove('player__btn--disabled');
 		broadcastBtn.classList.add('player__btn--pause');
 		broadcastBtn.classList.remove('player__btn--playing');
+		time.classList.remove('player__time--hidden');
 		if (player) {
 			player.pause();
 		}
+
+		let position;
+
+
+
+		setInterval(function tick() {
+			position = broadcast.seek();
+
+			let minutes = Math.floor(position / 60);
+
+			let seconds = Math.floor(position % 60);
+
+			// console.log();
+
+			time.innerText = minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');
+		}, 1000);
+
+		// var hours = Math.floor(timestamp / 60 / 60);
+
 	});
 
 	broadcast.on('pause', function(){
 		broadcastBtn.classList.remove('player__btn--disabled');
 		broadcastBtn.classList.remove('player__btn--pause');
 		broadcastBtn.classList.add('player__btn--playing');
-		broadcast.unload();
+		time.classList.add('player__time--hidden');
+		// broadcast.unload();
 	});
 
 	// Дальше идет плеер внутренний

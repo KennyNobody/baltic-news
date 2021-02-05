@@ -25,6 +25,9 @@
 		&:hover {
 			opacity: 0.7;
 		}
+		@include r(750) {
+			margin-bottom: 5px;
+		}
 	}
 	&__content {
 

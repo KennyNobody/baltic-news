@@ -7,7 +7,7 @@
 	border-radius: 10px;
 	position: relative;
 	@include r(750) {
-
+		padding: 55px 20px 30px 20px;
 	}
 	&__header {
 		margin-bottom: 35px;
