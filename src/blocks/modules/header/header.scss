@@ -1,5 +1,10 @@
 .header {
-	
+	position: sticky;
+    top: 0;
+	z-index: 2;
+	@include r(1260) {
+		position: static;
+	}
 }
 
 .mob-header {
@@ -8,6 +13,12 @@
 	display: none;
 	@include r(1260) {
 		display: block;
+		background-color: $light;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 2;
 	}
 	&__container {
 		display: flex;
@@ -17,9 +28,16 @@
 	&__logo {
 		display: block;
 		width: 150px;
+		@include r(1260) {
+			width: fit-content;
+		}
 		img {
 			display: block;
 			width: 100%;
+			@include r(1260) {
+				height: 46px;
+				width: auto;
+			}
 		}
 	}
 	&__menu {

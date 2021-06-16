@@ -1,4 +1,13 @@
-.mm-navbar {
+.mm-navbar__title {
+	display: flex;
+	justify-content: flex-start;
+	img {
+		height: 26px;
+		width: auto;
+	}
+}
+
+.mm-navbars_bottom {
 	a {
 		display: flex;
 	}

@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 	(function getWeather(){
 
+		console.log('Показываем погоду');
+
 		let apiKey = 'ed1d68f4ad14003c568ffd93d53bb0f9';
 		let iconUrl = 'http://openweathermap.org/img/w/';
 		let temperature;

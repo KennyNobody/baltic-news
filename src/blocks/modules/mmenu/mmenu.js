@@ -1,18 +1,19 @@
 import Mmenu from 'mmenu-js';
 
-(function() {
-	new Mmenu( "#menu", {
+(function () {
+	new Mmenu("#menu", {
 		"extensions": [
-		"pagedim-black"
+			"position-front",
+			"pagedim-black"
 		],
 		"navbar": {
-			"title": "Baltic-News"
+			"title": mmenuLogo
 		},
 		"navbars": [
-		{
-			"position": "bottom",
-			"content": links
-		}
+			{
+				"position": "bottom",
+				"content": links
+			}
 		]
 	});
 })();

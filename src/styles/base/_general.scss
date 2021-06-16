@@ -37,6 +37,9 @@ i {
 	overflow-x: hidden;
 	line-height: 1.4;
 	background-color: #F4F8F8;
+	@include r(1260) {
+		padding-top: 70px;
+	}
 	&--front {
 		@include r(1260) {
 			.layout__sidebar--right {

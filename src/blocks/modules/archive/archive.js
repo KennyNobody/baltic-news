@@ -2,7 +2,7 @@
 
 import daterangepicker from 'daterangepicker';
 
-( function initDatePicker(){
+(function initDatePicker() {
 
 	$('input[name="dates"]').daterangepicker({
 		"timePicker24Hour": true,
@@ -17,40 +17,42 @@ import daterangepicker from 'daterangepicker';
 			"weekLabel": "Н",
 			"autoApply": true,
 			"daysOfWeek": [
-			"Вс",
-			"Пн",
-			"Вт",
-			"Ср",
-			"Чт",
-			"Пт",
-			"Сб"
+				"Вс",
+				"Пн",
+				"Вт",
+				"Ср",
+				"Чт",
+				"Пт",
+				"Сб"
 			],
 			"monthNames": [
-			"Январь",
-			"Февраль",
-			"Март",
-			"Апрель",
-			"Май",
-			"Июнь",
-			"Июль",
-			"Август",
-			"Сентябрь",
-			"Oктябрь",
-			"Ноябрь",
-			"Декабрь"
+				"Январь",
+				"Февраль",
+				"Март",
+				"Апрель",
+				"Май",
+				"Июнь",
+				"Июль",
+				"Август",
+				"Сентябрь",
+				"Oктябрь",
+				"Ноябрь",
+				"Декабрь"
 			],
 			"firstDay": 1
 		},
 		"opens": "left",
 		"drops": "auto",
-		// "startDate": startDateText,
-		// "endDate": "05/25/2020",
 		"buttonClasses": "archive__btn",
 		"applyButtonClasses": "archive__btn--submit",
 		"cancelClass": "archive__btn--cancel"
 	});
 
-	$('input[name="dates"]').on('change', function() {
+	$('#daterange').on('apply.daterangepicker', function (ev, picker) {
+		console.log('Тык');
+	});
+
+	$('input[name="dates"]').on('change', function () {
 		let dateStart = this.value.split(' - ')[0];
 		let dateEnd = this.value.split(' - ')[1];
 

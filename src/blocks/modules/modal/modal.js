@@ -1,6 +1,6 @@
 import magnificPopup from 'magnific-popup';
 
-$(document).ready(function() {
+$(document).ready(function () {
 	$('.open-modal').magnificPopup({
 		// type:'inline',
 		showCloseBtn: false,
@@ -10,26 +10,20 @@ $(document).ready(function() {
 		type: 'inline'
 	});
 
-	$('.modal__close').on('click', function(e){
-		e.preventDefault();                                                 
+	$('.modal__close').on('click', function (e) {
+		e.preventDefault();
 		$.magnificPopup.close();
 	});
 
-	$('.modal-close').on('click', function(e){
-		e.preventDefault();                                                 
+	$('.modal-close').on('click', function (e) {
+		e.preventDefault();
 		$.magnificPopup.close();
 	});
 
-	$('.modal__btn--cancel').on('click', function(e){
-		e.preventDefault();                                                 
+	$('.modal__btn--cancel').on('click', function (e) {
+		e.preventDefault();
 		$.magnificPopup.close();
 	});
-
-	// $(document).on('keydown',function (event) {
-	// 	if (event.key == 13 && event.key == 17) {
-	// 		console.log('Нажади')
-	// 	}
-	// })
 
 	function openModal() {
 		$.magnificPopup.open({
@@ -39,7 +33,7 @@ $(document).ready(function() {
 			},
 			type: 'inline'
 		});
-		(function() {
+		(function () {
 			if (window.getSelection()) {
 				let select = window.getSelection();
 				let textarea = document.querySelector('.modal__input--inner');
@@ -54,10 +48,10 @@ $(document).ready(function() {
 	function runOnKeys(func, ...codes) {
 		let pressed = new Set();
 
-		document.addEventListener('keyup', function(event) {
+		document.addEventListener('keyup', function (event) {
 			pressed.add(event.code);
 
-			for (let code of codes) { 
+			for (let code of codes) {
 				if (!pressed.has(code)) {
 					return;
 				}
@@ -67,31 +61,40 @@ $(document).ready(function() {
 
 			func();
 		});
-
-		// document.addEventListener('keyup', function(event) {
-		// 	pressed.delete(event.code);
-		// });
 	}
 
 	runOnKeys(
 		openModal,
 		"Enter",
 		"ControlRight"
-		);
+	);
 });
 
-(function(){
-	const input = document.querySelectorAll('.file');
+document.addEventListener('DOMContentLoaded', () => {
+	(function inputFile() {
+		const inputBlock = document.querySelectorAll('.file');
 
-	if(input) {
-		for (let i = 0; i < input.length; i++) {
-			let field = input[i].querySelector('input');
-			let title = input[i].querySelector('.file__title');
-			field.addEventListener('change', function(){
-				let name = this.files[0].name;
-				title.innerText = name;
-			})
+		for (let i = 0; i < inputBlock.length; i++) {
+			initFileInput(inputBlock[i]);
 		}
-	}
 
-})();
+		function initFileInput(inputBlock) {
+			let textBlock = inputBlock.querySelector('.file__text');
+			let fieldBlock = inputBlock.querySelector('.file__field');
+
+			fieldBlock.addEventListener('change', () => {
+				updateImageDisplay();
+			});
+
+			function updateImageDisplay() {
+				let currentFiles = fieldBlock.files;
+
+				if (currentFiles.length === 0) {
+					textBlock.textContent = 'Файлы не выбраны';
+				} else {
+					textBlock.textContent = currentFiles[0].name;
+				}
+			}
+		}
+	})();
+});
